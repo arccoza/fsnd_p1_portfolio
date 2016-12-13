@@ -20,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/arccoza/fsnd_p1_portfolio/issues"
   },
-  "homepage": "https://github.com/arccoza/fsnd_p1_portfolio#readme"
+  "homepage": "https://github.com/arccoza/fsnd_p1_portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-each": "^0.2.0",
+    "gulp-gray-matter": "^3.0.1",
+    "gulp-markdown": "^1.2.0",
+    "gulp-mustache": "^2.3.0",
+    "through2": "^2.0.3"
+  },
+  "dependencies": {}
 }
