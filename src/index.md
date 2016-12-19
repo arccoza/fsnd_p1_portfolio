@@ -4,4 +4,4 @@ key: intro
 template: index.html
 ---
 
-# This is a test
+# This is a test {{key}}
