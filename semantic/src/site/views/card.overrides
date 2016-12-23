@@ -1,0 +1,121 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*-------------------
+      Inverted
+--------------------*/
+
+.ui.inverted.cards > .card,
+.ui.inverted.card {
+  background: @invertedBackground;
+  border: @invertedBorder;
+}
+
+.ui.inverted.cards > .card > .image:not(.ui) > img,
+.ui.inverted.card > .image:not(.ui) > img {
+  border: @invertedImageBorder;
+}
+
+.ui.inverted.cards > .card > .content,
+.ui.inverted.card > .content {
+  color: @invertedContentColor;
+  border: @invertedContentBorder;
+  border-top: @invertedContentDivider;
+  background: @invertedContentBackground;
+}
+
+.ui.inverted.cards > .card > .content > .header,
+.ui.inverted.card > .content > .header {
+  color: @invertedHeaderColor;
+}
+
+.ui.inverted.cards > .card > .content > .description,
+.ui.inverted.card > .content > .description {
+  color: @invertedDescriptionColor;
+}
+
+.ui.inverted.cards > .card .meta,
+.ui.inverted.card .meta {
+  color: @invertedMetaColor;
+}
+
+/* Generic */
+.ui.inverted.cards > .card > .content a:not(.ui),
+.ui.inverted.card > .content a:not(.ui) {
+  color: @invertedContentLinkColor;
+}
+.ui.inverted.cards > .card > .content a:not(.ui):hover,
+.ui.inverted.card > .content a:not(.ui):hover {
+  color: @invertedContentLinkHoverColor;
+}
+
+/* Header */
+.ui.inverted.cards > .card > .content > a.header,
+.ui.inverted.card > .content > a.header {
+  color: @invertedHeaderLinkColor;
+}
+.ui.inverted.cards > .card > .content > a.header:hover,
+.ui.inverted.card > .content > a.header:hover {
+  color: @invertedHeaderLinkHoverColor;
+}
+
+/* Meta */
+.ui.inverted.cards > .card .meta > a:not(.ui),
+.ui.inverted.card .meta > a:not(.ui) {
+  color: @invertedMetaLinkColor;
+}
+.ui.inverted.cards > .card .meta > a:not(.ui):hover,
+.ui.inverted.card .meta > a:not(.ui):hover {
+  color: @invertedMetaLinkHoverColor;
+}
+
+.ui.inverted.cards > .card .dimmer,
+.ui.inverted.card .dimmer {
+  background-color: @invertedDimmerColor;
+}
+
+.ui.inverted.cards > .card > .content .star.icon:hover,
+.ui.inverted.card > .content .star.icon:hover {
+  color: @invertedStarColor;
+}
+
+.ui.inverted.cards > .card > .content .active.star.icon,
+.ui.inverted.card > .content .active.star.icon {
+  color: @invertedStarActiveColor;
+}
+
+.ui.inverted.cards > .card > .content .like.icon:hover,
+.ui.inverted.card > .content .like.icon:hover {
+  color: @invertedLikeColor;
+}
+
+.ui.inverted.cards > .card > .content .active.like.icon,
+.ui.inverted.card > .content .active.like.icon {
+  color: @invertedLikeActiveColor;
+}
+
+.ui.inverted.cards > .card > .extra,
+.ui.inverted.card > .extra {
+  border-top: @invertedExtraDivider !important;
+  background: @invertedExtraBackground;
+  color: @invertedExtraColor;
+}
+
+.ui.inverted.cards > .card > .extra a:not(.ui),
+.ui.inverted.card > .extra a:not(.ui) {
+  color: @invertedExtraLinkColor;
+}
+
+.ui.inverted.cards > .card > .extra a:not(.ui):hover,
+.ui.inverted.card > .extra a:not(.ui):hover {
+  color: @invertedExtraLinkHoverColor;
+}
+
+.ui.inverted.cards a.card:hover,
+.ui.inverted.link.cards .card:hover,
+a.ui.inverted.card:hover,
+.ui.inverted.link.card:hover {
+  background: @invertedLinkHoverBackground;
+  border: @invertedLinkHoverBorder;
+}

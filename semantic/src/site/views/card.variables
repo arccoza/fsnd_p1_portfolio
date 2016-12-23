@@ -1,0 +1,53 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+/* Card */
+@boxShadow: none;
+@border: @4px solid @borderColor;
+
+/*-------------------
+       Content
+--------------------*/
+
+/* Header */
+@headerFontWeight: 300;
+
+/*-------------------
+      Inverted
+--------------------*/
+
+@invertedBackground: @black;
+@invertedBorder: @4px solid @black;
+@invertedImageBorder: none;
+@invertedContentColor: @invertedTextColor;
+@invertedContentBorder: none;
+@tmp: difference(#fff, @internalBorderColor);
+@invertedInternalBorderColor: rgba(red(@tmp), green(@tmp), blue(@tmp), alpha(@internalBorderColor));
+@invertedContentDivider: @borderWidth solid @invertedInternalBorderColor;
+@invertedContentBackground: none;
+@invertedHeaderColor: @invertedTextColor;
+@invertedDescriptionColor: @invertedMutedTextColor;
+@invertedMetaColor: @invertedTextColor;
+@invertedContentLinkColor: @contentLinkColor;
+@invertedContentLinkHoverColor: @contentLinkHoverColor;
+@invertedHeaderLinkColor: @invertedHeaderColor;
+@invertedHeaderLinkHoverColor: @invertedHoveredTextColor;
+@invertedMetaLinkColor: @invertedLightTextColor;
+@invertedMetaLinkHoverColor: @invertedTextColor;
+@invertedDimmerColor: '';
+@invertedStarColor: @invertedTextColor;
+@invertedStarActiveColor: @blueHover;
+@invertedLikeColor: @invertedTextColor;
+@invertedLikeActiveColor: @violetHover;
+@invertedExtraDivider: 1px solid rgba(255, 255, 255, 0.05);
+@invertedExtraBackground: none;
+@invertedExtraColor: @invertedMutedTextColor;
+@invertedExtraLinkColor: @invertedUnselectedTextColor;
+@invertedExtraLinkHoverColor: @linkHoverColor;
+@invertedLinkHoverBackground: @black;
+@invertedLinkHoverBorder: @invertedBorder;

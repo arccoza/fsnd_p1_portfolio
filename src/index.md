@@ -1,5 +1,7 @@
 ---
 title: Test md file
+firstname: Adrien
+lastname: de Pierres
 key: intro
 template: index.html
 ---

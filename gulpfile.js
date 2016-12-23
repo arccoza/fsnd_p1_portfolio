@@ -11,6 +11,8 @@ var markdown = require('gulp-markdown');
 var gmustache = require('gulp-mustache');
 var mustache = require('mustache');
 var matter = require('gulp-gray-matter');
+var semanticBuild = require('./semantic/tasks/build');
+var semanticWatch = require('./semantic/tasks/watch');
 var print = console.log.bind(console);
 
 
@@ -94,4 +96,11 @@ gulp.task('templates', ['clean', 'models'], function() {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('build', ['models', 'templates']);
+gulp.task('build:semantic', semanticBuild);
+gulp.task('watch:semantic', semanticWatch);
+
+gulp.task('build:all', ['build:semantic', 'models', 'templates']);
+gulp.task('build:ui', ['build:semantic']);
+gulp.task('build:site', ['models', 'templates']);
+
+gulp.task('watch:ui', ['watch:semantic']);

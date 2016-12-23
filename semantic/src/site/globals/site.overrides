@@ -1,0 +1,35 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+#header.ui.container {
+  margin: @medium 0 @large 0;
+}
+
+/*******************************
+             Headers
+*******************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  // text-transform: uppercase;
+}
+
+/*******************************
+             Modifiers
+*******************************/
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+b, .bold {
+  font-weight: 500 !important;
+}

@@ -1,0 +1,123 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@headerFont        : 'Oswald', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontRequest  : 'Oswald:300,400,700|Roboto+Condensed:300,400|Roboto:300,400';
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+@relativeBorderRadius: 0;
+@absoluteBorderRadius: 0;
+
+@defaultBorderRadius: @absoluteBorderRadius;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @black;
+@secondaryColor      : @grey;
+
+@lightPrimaryColor   : @lightBlack;
+@lightSecondaryColor : @lightGrey;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : 300;
+@headerLineHeight : 1.2857em;
+
+@h1 : 3rem;
+@h2 : 2.7rem;
+@h3 : 2.4rem;
+@h4 : 2rem;
+@h5 : 1.6rem;
+
+/*-------------------
+       Accents
+--------------------*/
+
+/* Differentiating Neutrals */
+@subtleGradient: linear-gradient(transparent, @transparentBlack);
+
+/* Differentiating Layers */
+@subtleShadow:
+  none
+;
+@floatingShadow:
+  none
+;
+
+/*-------------------
+        Sizes
+--------------------*/
+
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+
+@miniSize        : (13 / 14);
+@tinySize        : (14 / 14);
+@smallSize       : (15 / 14);
+@mediumSize      : (16 / 14);
+@largeSize       : (18 / 14);
+@bigSize         : (20 / 14);
+@hugeSize        : (22 / 14);
+@massiveSize     : (26 / 14);
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@red              : #FF4136;
+@orange           : #FF851B;
+@yellow           : #FFDC00;
+@olive            : #3D9970;
+@green            : #2ECC40;
+@teal             : #39CCCC;
+@blue             : #0074D9;
+@violet           : #6435C9;
+@purple           : #B10DC9;
+@pink             : #E03997;
+@brown            : #A5673F;
+@grey             : #AAAAAA;
+@black            : #111111;
+
+/*---  Light Colors  ---*/
+@lightRed         : lighten(@red, 15%);
+@lightOrange      : lighten(@orange, 15%);
+@lightYellow      : lighten(@yellow, 15%);
+@lightOlive       : lighten(@olive, 15%);
+@lightGreen       : lighten(@green, 15%);
+@lightTeal        : lighten(@teal, 15%);
+@lightBlue        : lighten(@blue, 15%);
+@lightViolet      : lighten(@violet, 15%);
+@lightPurple      : lighten(@purple, 15%);
+@lightPink        : lighten(@pink, 15%);
+@lightBrown       : lighten(@brown, 15%);
+@lightGrey        : lighten(@grey, 15%);
+@lightBlack       : lighten(@black, 15%);
+
+/*--- Colored Backgrounds ---*/
+@redBackground    : lighten(@red, 9%);
+@orangeBackground : lighten(@orange, 9%);
+@yellowBackground : lighten(@yellow, 9%);
+@oliveBackground  : lighten(@olive, 9%);
+@greenBackground  : lighten(@green, 9%);
+@tealBackground   : lighten(@teal, 9%);
+@blueBackground   : lighten(@blue, 9%);
+@violetBackground : lighten(@violet, 9%);
+@purpleBackground : lighten(@purple, 9%);
+@pinkBackground   : lighten(@pink, 9%);
+@brownBackground  : lighten(@brown, 9%);
