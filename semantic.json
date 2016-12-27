@@ -8,15 +8,15 @@
       "themes": "src/themes/"
     },
     "output": {
-      "packaged": "dist/",
-      "uncompressed": "dist/components/",
-      "compressed": "dist/components/",
-      "themes": "dist/themes/"
+      "packaged": "../pub/fw/",
+      "uncompressed": "../pub/fw/components/",
+      "compressed": "../pub/fw/components/",
+      "themes": "../pub/fw/themes/"
     },
-    "clean": "dist/"
+    "clean": "../pub/fw/"
   },
   "permission": false,
-  "autoInstall": false,
+  "autoInstall": true,
   "rtl": false,
   "version": "2.2.7"
 }

@@ -3,7 +3,34 @@
 *******************************/
 
 #header.ui.container {
-  margin: @medium 0 @large 0;
+  margin: @massive 0 @large 0;
+}
+
+hr {
+  border: none;
+  border-top: @1px solid @borderColor;
+}
+
+hr.black {
+  border: none;
+  border-top: @1px solid @black;
+}
+
+hr.white {
+  border: none;
+  border-top: @1px solid @white;
+}
+
+hr.thick {
+  border-top-width: @2px;
+}
+
+/*******************************
+             Page
+*******************************/
+
+body {
+  font-weight: @pageFontWeight;
 }
 
 /*******************************

@@ -18,6 +18,15 @@
 @headerFontWeight: 300;
 
 /*-------------------
+      Variations
+--------------------*/
+
+/* Card Count */
+@wideCardSpacing: 0.75em;
+@cardSpacing: 0.5em;
+@smallCardSpacing: 0.25em;
+
+/*-------------------
       Inverted
 --------------------*/
 

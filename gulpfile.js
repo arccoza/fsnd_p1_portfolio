@@ -36,9 +36,10 @@ var scrapeData = function(content, file, next) {
   var fdata = file.data;
 
   fdata.content = content;
-  fdata.path = fpath;
+  fdata.path = fbase;
   fdata.titleSlug = fdata.title ? slug(fdata.title) : null;
   fdata.dateSlug = fdata.date ? moment(fdata.date).format('YYYY-MM-DD') : null;
+  fdata.dateFormatted = fdata.date ? moment(fdata.date).format('MMM YYYY') : null;
   
   if(fdata.collection) {
     db[fdata.collection] = db[fdata.collection] || [];
@@ -54,14 +55,15 @@ var scrapeData = function(content, file, next) {
 };
 
 var renderHtml = function(content, file, next) {
-  var fpath = npath.relative(file.base, file.path);
+  // var fpath = npath.relative(file.base, file.path);
   var fdata = db.files[file.data.src];
+  db.self = fdata;
   print(fdata.src);
   // file.data.content = content;
 
   if(fdata.template) {
     var tmplPath = npath.join(file.base, fdata.template);
-    content = mustache.render(fs.readFileSync(tmplPath, 'utf8'), fdata);
+    content = mustache.render(fs.readFileSync(tmplPath, 'utf8'), db);
   }
   
   next(null, content);
@@ -69,7 +71,7 @@ var renderHtml = function(content, file, next) {
 
 
 gulp.task('clean', function() {
-  return del(dest);
+  return del.sync([dest + '/**/*', '!' + dest + '/fw/**']);
 });
 
 gulp.task('models', ['clean'], function() {
@@ -96,11 +98,16 @@ gulp.task('templates', ['clean', 'models'], function() {
     .pipe(gulp.dest(dest));
 });
 
+gulp.task('images', ['clean'], function() {
+  return gulp.src(src + '/**/*.@(png|jpg|gif|webp|svg)')
+    .pipe(gulp.dest(dest));
+});
+
 gulp.task('build:semantic', semanticBuild);
 gulp.task('watch:semantic', semanticWatch);
 
-gulp.task('build:all', ['build:semantic', 'models', 'templates']);
+gulp.task('build:all', ['build:semantic', 'models', 'templates', 'images']);
 gulp.task('build:ui', ['build:semantic']);
-gulp.task('build:site', ['models', 'templates']);
+gulp.task('build:site', ['models', 'templates', 'images']);
 
 gulp.task('watch:ui', ['watch:semantic']);
