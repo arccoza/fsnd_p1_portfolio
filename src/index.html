@@ -34,51 +34,76 @@
       <hr>
     </header>
     <section id="intro" class="ui container">
-      {{{content}}}
-    </section>
-    {{/self}}
-
-    {{#self}}
-    <section id="bang" class="ui container">
-      {{{content}}}
-    </section>
-    <section id="portfolio" class="ui container">
-      <div class="ui inverted segment">
-        {{{content}}}
+      <div class="ui fluid image">
+        <img src="http://placehold.it/1280x480">
       </div>
+      <div class="ui container">
+        {{{content}}}
+        <div class="ui message">
+          <div class="header">
+            New Site Features
+          </div>
+          <ul class="list">
+            <li>You can now have cover images on blog pages</li>
+            <li>Drafts will now auto-save while writing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
     {{/self}}
 
+    <section id="content" class="ui container">
       <h2 class="ui header">Portfolio</h2>
-      <div class="ui three cards">
+      <div class="ui three doubling stackable cards">
         {{#projects}}
           <article class="ui inverted fluid card">
-            <div class="image dimmable">
-              <div class="ui blurring dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui teal more button">More info...</div>
+            <header class="image dimmable">
+              <!-- <div class="computer large screen only"> -->
+                <div class="ui blurring dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <button class="ui right labeled teal more icon button">
+                        <i class="right arrow icon"></i>
+                        View
+                      </button>
+                    </div>
                   </div>
-                </div>
+                <!-- </div> -->
               </div>
               <img src="./projects/fsnd_p0_movie_trailer_website_screenshot.png">
-            </div>
-            <div class="content">
+            </header>
+            <section class="content">
               <div class="header">{{title}}</div>
               <div class="meta">
-                <a class="group">{{dateFormatted}}</a>
+                <!-- <a class="group computer large screen widescreen only">{{dateFormatted}}</a> -->
+                <button class="ui right labeled teal more icon button right floated mobile tablet only">
+                  <i class="right arrow icon"></i>
+                  View
+                </button>
               </div>
-              <div class="description">{{description}}</div>
-            </div>
-            <div class="extra content">
-              <a>
+              <div class="description computer large screen widescreen only">{{description}}</div>
+            </section>
+            <footer class="extra content computer large screen widescreen only">
+              <!-- <a>
                 <i class="folder icon"></i>
                 {{collection}}
+              </a> -->
+              <a class="right floated">
+                {{dateFormatted}}
+                <i class="calendar icon"></i>
               </a>
-            </div>
+            </footer>
           </article>
         {{/projects}}
       </div>
     </section>
+    <footer id="footer" class="ui container">
+      <div class="ui horizontal divider uppercase">
+        credits
+      </div>
+
+    </footer>
+
     <section>
       <div class="ui basic modal">
         <div class="ui icon header">
