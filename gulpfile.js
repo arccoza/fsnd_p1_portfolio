@@ -3,14 +3,15 @@ var npath = require('path');
 var del = require('del');
 var slug = require('slug');
 var moment = require('moment');
-var through = require('through2');
 var gulp = require('gulp');
+var series = require('gulp-sequence');
 var gdata = require('gulp-data');
 var each = require('gulp-each');
 var markdown = require('gulp-markdown');
 var gmustache = require('gulp-mustache');
 var mustache = require('mustache');
 var matter = require('gulp-gray-matter');
+var changed = require('gulp-changed');
 var semanticBuild = require('./semantic/tasks/build');
 var semanticWatch = require('./semantic/tasks/watch');
 var print = console.log.bind(console);
@@ -69,12 +70,14 @@ var renderHtml = function(content, file, next) {
   next(null, content);
 };
 
-
-gulp.task('clean', function() {
+// Gulp clean task, deletes everything in the dest folder, except `fw`.
+function clean() {
   return del.sync([dest + '/**/*', '!' + dest + '/fw/**']);
-});
+}
 
-gulp.task('models', ['clean'], function() {
+// Gulp models task, creates a data structure out of all the `md` files,
+// to be passed to templates in other tasks.
+function models() {
   return gulp.src(src + '/**/*.md')
     .pipe(each(markSrc))
     .pipe(matter())
@@ -86,28 +89,48 @@ gulp.task('models', ['clean'], function() {
     //   return {test: true};
     // }))
     // .pipe(gulp.dest(dest));
-});
+}
 
-gulp.task('templates', ['clean', 'models'], function() {
+// Gulp templates task builds the html for the site from
+// templates and data from the models task.
+function templates() {
   return gulp.src(src + '/**/*.md')
+    .pipe(changed(dest, { extension: '.html' }))
     .pipe(each(markSrc))
     .pipe(matter())
     .pipe(gmustache())
     .pipe(markdown())
     .pipe(each(renderHtml))
     .pipe(gulp.dest(dest));
-});
+}
 
-gulp.task('images', ['clean'], function() {
+// Gulp task to prep images for the static site.
+function images() {
   return gulp.src(src + '/**/*.@(png|jpg|gif|webp|svg)')
+    .pipe(changed(dest))
     .pipe(gulp.dest(dest));
-});
+}
 
+// Build the site, models -> templates and images.
+gulp.task('build:clean', clean);
+gulp.task('build:models', models);
+gulp.task('build:templates', templates);
+gulp.task('build:images', images);
+gulp.task('build:site', series('build:clean', 'build:models', 'build:images', 'build:templates'));
+// Build CSS and JS for the UI.
 gulp.task('build:semantic', semanticBuild);
-gulp.task('watch:semantic', semanticWatch);
-
-gulp.task('build:all', ['build:semantic', 'models', 'templates', 'images']);
 gulp.task('build:ui', ['build:semantic']);
-gulp.task('build:site', ['models', 'templates', 'images']);
-
+// Build everything.
+gulp.task('build', ['build:semantic', 'build:site']);
+// Watch for changes and update site.
+gulp.task('update:images', images);
+gulp.task('update:site', series('build:models', 'build:templates'));
+gulp.task('watch:site', function(done) {
+  gulp.watch(src + '/**/*.@(md|html)', ['update:site']);
+  gulp.watch(src + '/**/*.@(png|jpg|gif|webp|svg)', ['update:images']);
+});
+// Watch for changes on the CSS and JS for the UI.
+gulp.task('watch:semantic', semanticWatch);
 gulp.task('watch:ui', ['watch:semantic']);
+// Watch everything.
+gulp.task('watch', ['watch:site', 'watch:ui']);
