@@ -22,6 +22,7 @@ var src = 'src';
 var dest = 'pub';
 slug.defaults.mode ='rfc3986';
 
+// Gulp plugin to mark the original src of the file.
 var markSrc = function(content, file, next) {
   var fpath = npath.relative(file.base, file.path);
   file.data = file.data || {};
@@ -30,6 +31,7 @@ var markSrc = function(content, file, next) {
   next(null, content);
 };
 
+// Gulp plugin to scrape data from .md files and add it to a data structure.
 var scrapeData = function(content, file, next) {
   var fpath = npath.relative(file.base, file.path);
   var fbase = npath.dirname(fpath);
@@ -44,7 +46,10 @@ var scrapeData = function(content, file, next) {
   
   if(fdata.collection) {
     db[fdata.collection] = db[fdata.collection] || [];
-    db[fdata.collection].push(fdata);
+    db[fdata.collection]._index = db[fdata.collection]._index || {};
+    let idx = db[fdata.collection]._index[fdata.src] || db[fdata.collection].length;
+    db[fdata.collection]._index[fdata.src] = idx;
+    db[fdata.collection][idx] = fdata;
   }
   if(fdata.key)
     db[fdata.key] = fdata;
@@ -55,6 +60,8 @@ var scrapeData = function(content, file, next) {
   next(null, content);
 };
 
+// Gulp plugin to render .md files using data collected by `scrapeData`
+// and templates specified by their `template` property (frontmatter).
 var renderHtml = function(content, file, next) {
   // var fpath = npath.relative(file.base, file.path);
   var fdata = db.files[file.data.src];
