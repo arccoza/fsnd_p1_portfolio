@@ -124,7 +124,9 @@ gulp.task('build:ui', ['build:semantic']);
 gulp.task('build', ['build:semantic', 'build:site']);
 // Watch for changes and update site.
 gulp.task('update:images', images);
-gulp.task('update:site', series('build:models', 'build:templates'));
+// Arrow function wrapper around `series` neccessary because `series` returns a thunk
+// which can only be run once and is no good for a watcher.
+gulp.task('update:site', done => series('build:models', 'build:templates')(done));
 gulp.task('watch:site', function(done) {
   gulp.watch(src + '/**/*.@(md|html)', ['update:site']);
   gulp.watch(src + '/**/*.@(png|jpg|gif|webp|svg)', ['update:images']);
