@@ -28,26 +28,19 @@
 <body>
   <div class="ui container">
     {{#self}}
-    <header id="header" class="ui container">
-      <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
-      <div class="ui container right aligned uppercase">developer</div>
-      <hr>
+    <header id="header" class="ui two column stackable grid container">
+      <div class="ui image column center aligned">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo">
+      </div>
+      <div class="column">
+        <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
+        <div class="ui container right aligned uppercase">developer</div>
+      </div>
+      <hr class="twelve wide column">
     </header>
     <section id="intro" class="ui container">
       <div class="ui fluid image">
-        <img src="http://placehold.it/1280x480">
-      </div>
-      <div class="ui container">
-        {{{content}}}
-        <div class="ui message">
-          <div class="header">
-            New Site Features
-          </div>
-          <ul class="list">
-            <li>You can now have cover images on blog pages</li>
-            <li>Drafts will now auto-save while writing</li>
-          </ul>
-        </div>
+        <img src="https://dummyimage.com/1280x480/000/fff.jpg">
       </div>
     </section>
     {{/self}}
@@ -70,25 +63,29 @@
                   </div>
                 <!-- </div> -->
               </div>
-              <img src="./projects/fsnd_p0_movie_trailer_website_screenshot.png">
+              <img src="{{media.images.screenshot}}">
             </header>
             <section class="content">
               <div class="header">{{title}}</div>
               <div class="meta">
                 <!-- <a class="group computer large screen widescreen only">{{dateFormatted}}</a> -->
-                <button class="ui right labeled teal more icon button right floated mobile tablet only">
-                  <i class="right arrow icon"></i>
-                  View
-                </button>
               </div>
-              <div class="description computer large screen widescreen only">{{description}}</div>
+              <div class="description">{{description}}</div>
             </section>
-            <footer class="extra content computer large screen widescreen only">
+            <footer class="extra content">
               <!-- <a>
                 <i class="folder icon"></i>
                 {{collection}}
               </a> -->
-              <a class="right floated">
+              <button class="ui right labeled teal more icon button right floated mobile tablet only">
+                <i class="right arrow icon"></i>
+                View
+              </button>
+              <a class="right floated computer large screen widescreen only">
+                {{dateFormatted}}
+                <i class="calendar icon"></i>
+              </a>
+              <a class="left floated mobile tablet only">
                 {{dateFormatted}}
                 <i class="calendar icon"></i>
               </a>
@@ -97,11 +94,16 @@
         {{/projects}}
       </div>
     </section>
+
     <footer id="footer" class="ui container">
       <div class="ui horizontal divider uppercase">
         credits
       </div>
-
+      <div class="ui clearing dimmable text container">
+        <div class="ui active inverted dimmer"></div>
+        <p>Adrien de Pierres <img src="/images/logo.svg" alt="logo" class="ui mini image right floated"></p>
+        <p>Udacity <img src="/images/udacity.svg" alt="udacity" class="ui mini image right floated"></p>
+      </div>
     </footer>
 
     <section>

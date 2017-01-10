@@ -28,6 +28,7 @@
     "gulp-data": "^1.2.1",
     "gulp-each": "^0.2.0",
     "gulp-gray-matter": "^3.0.1",
+    "gulp-if": "^2.0.2",
     "gulp-markdown": "^1.2.0",
     "gulp-mustache": "^2.3.0",
     "gulp-sequence": "^0.4.6",

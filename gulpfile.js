@@ -7,6 +7,7 @@ var gulp = require('gulp');
 var series = require('gulp-sequence');
 var gdata = require('gulp-data');
 var each = require('gulp-each');
+var gif = require('gulp-if');
 var markdown = require('gulp-markdown');
 var gmustache = require('gulp-mustache');
 var mustache = require('mustache');
@@ -43,8 +44,15 @@ var scrapeData = function(content, file, next) {
   fdata.titleSlug = fdata.title ? slug(fdata.title) : null;
   fdata.dateSlug = fdata.date ? moment(fdata.date).format('YYYY-MM-DD') : null;
   fdata.dateFormatted = fdata.date ? moment(fdata.date).format('MMM YYYY') : null;
+
+  // if(fdata.media && fdata.media.images) {
+  //   for(let k of Object.keys(fdata.media.images)) {
+
+  //   }
+  // }
   
   if(fdata.collection) {
+    // TODO: Iron out kinks in this collection update code.
     db[fdata.collection] = db[fdata.collection] || [];
     db[fdata.collection]._index = db[fdata.collection]._index || {};
     let idx = db[fdata.collection]._index[fdata.src] || db[fdata.collection].length;
@@ -85,6 +93,8 @@ function clean() {
 // Gulp models task, creates a data structure out of all the `md` files,
 // to be passed to templates in other tasks.
 function models() {
+  db = { files: {} };
+
   return gulp.src(src + '/**/*.md')
     .pipe(each(markSrc))
     .pipe(matter())
@@ -102,7 +112,7 @@ function models() {
 // templates and data from the models task.
 function templates() {
   return gulp.src(src + '/**/*.md')
-    .pipe(changed(dest, { extension: '.html' }))
+    // .pipe(changed(dest, { extension: '.html' }))
     .pipe(each(markSrc))
     .pipe(matter())
     .pipe(gmustache())

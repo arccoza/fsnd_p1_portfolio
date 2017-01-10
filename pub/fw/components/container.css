@@ -145,3 +145,114 @@
          Site Overrides
 *******************************/
 
+
+/*-------------------
+       Clearing
+--------------------*/
+
+.ui.clearing.container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+@media only screen and (max-width: 767px) {
+  .ui[class*="mobile left aligned"].container {
+    text-align: left;
+  }
+  .ui[class*="mobile center aligned"].container {
+    text-align: center;
+  }
+  .ui[class*="mobile right aligned"].container {
+    text-align: right;
+  }
+  .ui[class*="mobile justified"].container {
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+}
+
+/* Tablet Only Hide */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui[class*="tablet left aligned"].container {
+    text-align: left;
+  }
+  .ui[class*="tablet center aligned"].container {
+    text-align: center;
+  }
+  .ui[class*="tablet right aligned"].container {
+    text-align: right;
+  }
+  .ui[class*="tablet justified"].container {
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+}
+
+/* Computer Only Hide */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui[class*="computer left aligned"].container {
+    text-align: left;
+  }
+  .ui[class*="computer center aligned"].container {
+    text-align: center;
+  }
+  .ui[class*="computer right aligned"].container {
+    text-align: right;
+  }
+  .ui[class*="computer justified"].container {
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+}
+
+/* Large Screen Only Hide */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .ui[class*="large screen left aligned"].container {
+    text-align: left;
+  }
+  .ui[class*="large screen center aligned"].container {
+    text-align: center;
+  }
+  .ui[class*="large screen right aligned"].container {
+    text-align: right;
+  }
+  .ui[class*="large screen justified"].container {
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+}
+
+/* Widescreen Only Hide */
+@media only screen and (min-width: 1920px) {
+  .ui[class*="widescreen left aligned"].container {
+    text-align: left;
+  }
+  .ui[class*="widescreen center aligned"].container {
+    text-align: center;
+  }
+  .ui[class*="widescreen right aligned"].container {
+    text-align: right;
+  }
+  .ui[class*="widescreen justified"].container {
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+}

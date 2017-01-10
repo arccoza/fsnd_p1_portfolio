@@ -3,15 +3,24 @@
 *******************************/
 
 #header.ui.container {
-  margin: @massive 0 @large 0;
+  margin: @massive 0 2 * @large 0;
+}
+
+#intro.ui.container {
+  max-height: 480px;
+  margin: 0 0 4 * @large 0;
+}
+
+#logo {
+  height: 4em;
 }
 
 #content.ui.container {
-  margin: @massive 0 @massive 0;
+  margin: 0 0 4 * @massive 0;
 }
 
 #footer.ui.container {
-  margin: 4 * @massive 0 2 * @large 0;
+  margin: 0 0 2 * @large 0;
 }
 
 hr {

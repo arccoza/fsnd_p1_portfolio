@@ -159,13 +159,20 @@ input::selection {
 *******************************/
 
 #header.ui.container {
-  margin: 1.85714286rem 0 1.28571429rem 0;
+  margin: 1.85714286rem 0 2.57142857rem 0;
+}
+#intro.ui.container {
+  max-height: 480px;
+  margin: 0 0 5.14285714rem 0;
+}
+#logo {
+  height: 4em;
 }
 #content.ui.container {
-  margin: 1.85714286rem 0 1.85714286rem 0;
+  margin: 0 0 7.42857143rem 0;
 }
 #footer.ui.container {
-  margin: 7.42857143rem 0 2.57142857rem 0;
+  margin: 0 0 2.57142857rem 0;
 }
 hr {
   border: none;
