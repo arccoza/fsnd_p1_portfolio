@@ -29,8 +29,11 @@
   <div class="ui container">
     {{#self}}
     <header id="header" class="ui two column stackable grid container">
-      <div class="ui image column center aligned">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo">
+      <div class="column left aligned tablet computer large screen widescreen only">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="">
+      </div>
+      <div class="column center aligned mobile only">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>

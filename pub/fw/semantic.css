@@ -4925,123 +4925,6 @@ b,
   clear: both;
   visibility: hidden;
 }
-
-/*******************************
-           Variations
-*******************************/
-
-@media only screen and (max-width: 767px) {
-  .ui[class*="mobile left aligned"].container {
-    text-align: left;
-  }
-
-  .ui[class*="mobile center aligned"].container {
-    text-align: center;
-  }
-
-  .ui[class*="mobile right aligned"].container {
-    text-align: right;
-  }
-
-  .ui[class*="mobile justified"].container {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-  }
-}
-
-/* Tablet Only Hide */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .ui[class*="tablet left aligned"].container {
-    text-align: left;
-  }
-
-  .ui[class*="tablet center aligned"].container {
-    text-align: center;
-  }
-
-  .ui[class*="tablet right aligned"].container {
-    text-align: right;
-  }
-
-  .ui[class*="tablet justified"].container {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-  }
-}
-
-/* Computer Only Hide */
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .ui[class*="computer left aligned"].container {
-    text-align: left;
-  }
-
-  .ui[class*="computer center aligned"].container {
-    text-align: center;
-  }
-
-  .ui[class*="computer right aligned"].container {
-    text-align: right;
-  }
-
-  .ui[class*="computer justified"].container {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-  }
-}
-
-/* Large Screen Only Hide */
-
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
-  .ui[class*="large screen left aligned"].container {
-    text-align: left;
-  }
-
-  .ui[class*="large screen center aligned"].container {
-    text-align: center;
-  }
-
-  .ui[class*="large screen right aligned"].container {
-    text-align: right;
-  }
-
-  .ui[class*="large screen justified"].container {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-  }
-}
-
-/* Widescreen Only Hide */
-
-@media only screen and (min-width: 1920px) {
-  .ui[class*="widescreen left aligned"].container {
-    text-align: left;
-  }
-
-  .ui[class*="widescreen center aligned"].container {
-    text-align: center;
-  }
-
-  .ui[class*="widescreen right aligned"].container {
-    text-align: right;
-  }
-
-  .ui[class*="widescreen justified"].container {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-  }
-}
 /*!
  * # Semantic UI 2.2.7 - Divider
  * http://github.com/semantic-org/semantic-ui/
@@ -20710,17 +20593,17 @@ ol.ui.horizontal.list li:before,
     display: none !important;
   }
 
-  .ui[class*="large screen only"].grid.grid.grid:not(.mobile),
-  .ui.grid.grid.grid > [class*="large screen only"].row:not(.mobile),
-  .ui.grid.grid.grid > [class*="large screen only"].column:not(.mobile),
-  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.mobile) {
+  .ui[class*="large screen only"].grid.grid.grid:not(.tablet),
+  .ui.grid.grid.grid > [class*="large screen only"].row:not(.tablet),
+  .ui.grid.grid.grid > [class*="large screen only"].column:not(.tablet),
+  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.tablet) {
     display: none !important;
   }
 
-  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
-  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
-  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
-  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+  .ui[class*="widescreen only"].grid.grid.grid:not(.tablet),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.tablet),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.tablet),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.tablet) {
     display: none !important;
   }
 }
@@ -20742,17 +20625,17 @@ ol.ui.horizontal.list li:before,
     display: none !important;
   }
 
-  .ui[class*="large screen only"].grid.grid.grid:not(.mobile),
-  .ui.grid.grid.grid > [class*="large screen only"].row:not(.mobile),
-  .ui.grid.grid.grid > [class*="large screen only"].column:not(.mobile),
-  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.mobile) {
+  .ui[class*="large screen only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="large screen only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="large screen only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.computer) {
     display: none !important;
   }
 
-  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
-  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
-  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
-  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+  .ui[class*="widescreen only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.computer) {
     display: none !important;
   }
 }
@@ -20760,24 +20643,24 @@ ol.ui.horizontal.list li:before,
 /* Large Screen Only Hide */
 
 @media only screen and (min-width: 1200px) and (max-width: 1919px) {
-  .ui[class*="mobile only"].grid.grid.grid:not(.computer),
-  .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
-  .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
-  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.computer) {
+  .ui[class*="mobile only"].grid.grid.grid:not([class*="large screen"]),
+  .ui.grid.grid.grid > [class*="mobile only"].row:not([class*="large screen"]),
+  .ui.grid.grid.grid > [class*="mobile only"].column:not([class*="large screen"]),
+  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not([class*="large screen"]) {
     display: none !important;
   }
 
-  .ui[class*="tablet only"].grid.grid.grid:not(.computer),
-  .ui.grid.grid.grid > [class*="tablet only"].row:not(.computer),
-  .ui.grid.grid.grid > [class*="tablet only"].column:not(.computer),
-  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.computer) {
+  .ui[class*="tablet only"].grid.grid.grid:not([class*="large screen"]),
+  .ui.grid.grid.grid > [class*="tablet only"].row:not([class*="large screen"]),
+  .ui.grid.grid.grid > [class*="tablet only"].column:not([class*="large screen"]),
+  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not([class*="large screen"]) {
     display: none !important;
   }
 
-  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
-  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
-  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
-  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+  .ui[class*="widescreen only"].grid.grid.grid:not([class*="large screen"]),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not([class*="large screen"]),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not([class*="large screen"]),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not([class*="large screen"]) {
     display: none !important;
   }
 }
@@ -20785,17 +20668,17 @@ ol.ui.horizontal.list li:before,
 /* Widescreen Only Hide */
 
 @media only screen and (min-width: 1920px) {
-  .ui[class*="mobile only"].grid.grid.grid:not(.computer),
-  .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
-  .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
-  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.computer) {
+  .ui[class*="mobile only"].grid.grid.grid:not(.widescreen),
+  .ui.grid.grid.grid > [class*="mobile only"].row:not(.widescreen),
+  .ui.grid.grid.grid > [class*="mobile only"].column:not(.widescreen),
+  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.widescreen) {
     display: none !important;
   }
 
-  .ui[class*="tablet only"].grid.grid.grid:not(.computer),
-  .ui.grid.grid.grid > [class*="tablet only"].row:not(.computer),
-  .ui.grid.grid.grid > [class*="tablet only"].column:not(.computer),
-  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.computer) {
+  .ui[class*="tablet only"].grid.grid.grid:not(.widescreen),
+  .ui.grid.grid.grid > [class*="tablet only"].row:not(.widescreen),
+  .ui.grid.grid.grid > [class*="tablet only"].column:not(.widescreen),
+  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.widescreen) {
     display: none !important;
   }
 }
