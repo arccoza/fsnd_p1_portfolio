@@ -12,6 +12,8 @@ var markdown = require('gulp-markdown');
 var gmustache = require('gulp-mustache');
 var mustache = require('mustache');
 var matter = require('gulp-gray-matter');
+var imagemin = require('gulp-imagemin');
+var responsive = require('gulp-responsive');
 var changed = require('gulp-changed');
 var semanticBuild = require('./semantic/tasks/build');
 var semanticWatch = require('./semantic/tasks/watch');
@@ -125,6 +127,35 @@ function templates() {
 function images() {
   return gulp.src(src + '/**/*.@(png|jpg|gif|webp|svg)')
     .pipe(changed(dest))
+    .pipe(gif('**/*.@(png|jpg|gif|webp)', responsive({
+      '**/*.@(png|jpg|gif|webp)': [
+        {
+          quality: 90
+        },
+        {
+          width: 160,
+          rename: { suffix: '-w160' }
+        },
+        {
+          width: 320,
+          rename: { suffix: '-w320' }
+        },
+        {
+          width: 640,
+          rename: { suffix: '-w640' }
+        },
+        {
+          width: 1280,
+          rename: { suffix: '-w1280' }
+        }
+      ]
+    }, 
+    {
+      quality: 90,
+      withMetadata: false,
+      skipOnEnlargement: true,
+      errorOnEnlargement: false
+    })))
     .pipe(gulp.dest(dest));
 }
 

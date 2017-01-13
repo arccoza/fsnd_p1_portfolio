@@ -66,14 +66,16 @@
                   </div>
                 <!-- </div> -->
               </div>
-              <img src="{{media.images.screenshot}}">
+              <img 
+                src="{{media.images.screenshot.tile}}"
+                srcset="{{media.images.screenshot.tile2x}} 2x">
             </header>
             <section class="content">
               <div class="header">{{title}}</div>
               <div class="meta">
                 <!-- <a class="group computer large screen widescreen only">{{dateFormatted}}</a> -->
               </div>
-              <div class="description">{{description}}</div>
+              <p class="description">{{description}}</p>
             </section>
             <footer class="extra content">
               <!-- <a>
