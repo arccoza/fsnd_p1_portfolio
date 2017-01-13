@@ -159,12 +159,19 @@ function images() {
     .pipe(gulp.dest(dest));
 }
 
+// Gulp scripts task.
+function scripts() {
+  return gulp.src(src + '/**/*.js')
+    .pipe(gulp.dest(dest));
+}
+
 // Build the site, models -> templates and images.
 gulp.task('build:clean', clean);
 gulp.task('build:models', models);
 gulp.task('build:templates', templates);
 gulp.task('build:images', images);
-gulp.task('build:site', series('build:clean', 'build:models', 'build:images', 'build:templates'));
+gulp.task('build:scripts', scripts);
+gulp.task('build:site', series('build:clean', 'build:models', 'build:images', 'build:scripts', 'build:templates'));
 // Build CSS and JS for the UI.
 gulp.task('build:semantic', semanticBuild);
 gulp.task('build:ui', ['build:semantic']);
@@ -172,12 +179,14 @@ gulp.task('build:ui', ['build:semantic']);
 gulp.task('build', ['build:semantic', 'build:site']);
 // Watch for changes and update site.
 gulp.task('update:images', images);
+gulp.task('update:scripts', scripts);
 // Arrow function wrapper around `series` neccessary because `series` returns a thunk
 // which can only be run once and is no good for a watcher.
 gulp.task('update:site', done => series('build:models', 'build:templates')(done));
 gulp.task('watch:site', function(done) {
   gulp.watch(src + '/**/*.@(md|html)', ['update:site']);
   gulp.watch(src + '/**/*.@(png|jpg|gif|webp|svg)', ['update:images']);
+  gulp.watch(src + '/js/*.js', ['update:scripts']);
 });
 // Watch for changes on the CSS and JS for the UI.
 gulp.task('watch:semantic', semanticWatch);
