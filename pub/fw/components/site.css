@@ -162,8 +162,14 @@ input::selection {
   margin: 1.85714286rem 0 2.57142857rem 0;
 }
 #intro.ui.container {
+  position: relative;
   max-height: 480px;
   margin: 0 0 5.14285714rem 0;
+}
+#intro > .ui.image {
+  max-height: inherit;
+  border: 5px solid #111111;
+  overflow: hidden;
 }
 #logo {
   height: 4em;

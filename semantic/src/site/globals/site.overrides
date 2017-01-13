@@ -7,8 +7,16 @@
 }
 
 #intro.ui.container {
+  position: relative;
   max-height: 480px;
   margin: 0 0 4 * @large 0;
+}
+
+#intro > .ui.image {
+  // transform: skew(30deg, -5deg) scale(1.5);
+  max-height: inherit;
+  border: 5px solid @black;
+  overflow: hidden;
 }
 
 #logo {

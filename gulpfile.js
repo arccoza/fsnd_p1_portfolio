@@ -127,8 +127,9 @@ function templates() {
 function images() {
   return gulp.src(src + '/**/*.@(png|jpg|gif|webp|svg)')
     .pipe(changed(dest))
-    .pipe(gif('**/*.@(png|jpg|gif|webp)', responsive({
-      '**/*.@(png|jpg|gif|webp)': [
+    .pipe(gif('**/*.gif', gulp.dest(dest)))
+    .pipe(gif('**/*.@(png|jpg|webp)', responsive({
+      '**/*.@(png|jpg|webp)': [
         {
           quality: 90
         },
