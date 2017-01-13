@@ -500,3 +500,6 @@
          Site Overrides
 *******************************/
 
+.ui.dimmer.modals {
+  background: #111111;
+}

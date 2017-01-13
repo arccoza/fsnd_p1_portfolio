@@ -385,7 +385,7 @@
 .ui.steps a.active.step:hover::after,
 .ui.steps a.active.step:hover {
   cursor: pointer;
-  background: #d0d0d0;
+  background: #eaeaea;
   color: rgba(0, 0, 0, 0.87);
 }
 

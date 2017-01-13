@@ -57,9 +57,7 @@ To access the Movie Trailers site:
 2. Access the site by running the http server `python server.py`
 3. Open your browser to [http://localhost:8000](http://localhost:8000)
 
-If everything worked you should see something like:
-
-<img src="screenshot.png">
+If everything worked you should see something like the screenshot.
 
 ## Usage
 

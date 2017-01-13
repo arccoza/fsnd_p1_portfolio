@@ -216,9 +216,8 @@ body {
 .lowercase {
   text-transform: lowercase !important;
 }
-b,
 .bold {
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 
 /*----------------------

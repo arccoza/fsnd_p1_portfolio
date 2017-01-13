@@ -301,14 +301,14 @@ h5.ui.header .sub.header {
   color: rgba(255, 255, 255, 0.8);
 }
 .ui.inverted.attached.header {
-  background: #373737 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-  background: #373737 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #515151 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #515151 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
   box-shadow: none;
   border-color: transparent;
 }
 .ui.inverted.block.header {
-  background: #373737 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-  background: #373737 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #515151 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #515151 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
   box-shadow: none;
 }
 .ui.inverted.block.header {
@@ -334,10 +334,10 @@ a.ui.red.header:hover {
 
 /* Inverted */
 .ui.inverted.red.header {
-  color: #ff8983 !important;
+  color: #ffbab5 !important;
 }
 a.ui.inverted.red.header:hover {
-  color: #ff7169 !important;
+  color: #ffa19c !important;
 }
 
 /*--- Orange ---*/
@@ -354,10 +354,10 @@ a.ui.orange.header:hover {
 
 /* Inverted */
 .ui.inverted.orange.header {
-  color: #ffae68 !important;
+  color: #ffc99b !important;
 }
 a.ui.inverted.orange.header:hover {
-  color: #ffa04e !important;
+  color: #ffbc81 !important;
 }
 
 /*--- Olive ---*/
@@ -374,10 +374,10 @@ a.ui.olive.header:hover {
 
 /* Inverted */
 .ui.inverted.olive.header {
-  color: #62c096 !important;
+  color: #87cfaf !important;
 }
 a.ui.inverted.olive.header:hover {
-  color: #4bbe8b !important;
+  color: #70cca3 !important;
 }
 
 /*--- Yellow ---*/
@@ -394,10 +394,10 @@ a.ui.yellow.header:hover {
 
 /* Inverted */
 .ui.inverted.yellow.header {
-  color: #ffe74d !important;
+  color: #ffee80 !important;
 }
 a.ui.inverted.yellow.header:hover {
-  color: #ffe333 !important;
+  color: #ffea66 !important;
 }
 
 /*--- Green ---*/
@@ -414,10 +414,10 @@ a.ui.green.header:hover {
 
 /* Inverted */
 .ui.inverted.green.header {
-  color: #69dd76 !important;
+  color: #93e79c !important;
 }
 a.ui.inverted.green.header:hover {
-  color: #4edf5e !important;
+  color: #79e786 !important;
 }
 
 /*--- Teal ---*/
@@ -434,10 +434,10 @@ a.ui.teal.header:hover {
 
 /* Inverted */
 .ui.inverted.teal.header {
-  color: #76dcdc !important;
+  color: #9ee6e6 !important;
 }
 a.ui.inverted.teal.header:hover {
-  color: #5cdcdc !important;
+  color: #86e5e5 !important;
 }
 
 /*--- Blue ---*/
@@ -454,10 +454,10 @@ a.ui.blue.header:hover {
 
 /* Inverted */
 .ui.inverted.blue.header {
-  color: #269aff !important;
+  color: #5ab2ff !important;
 }
 a.ui.inverted.blue.header:hover {
-  color: #0d8eff !important;
+  color: #40a6ff !important;
 }
 
 /*--- Violet ---*/
@@ -474,10 +474,10 @@ a.ui.violet.header:hover {
 
 /* Inverted */
 .ui.inverted.violet.header {
-  color: #9271da !important;
+  color: #b199e4 !important;
 }
 a.ui.inverted.violet.header:hover {
-  color: #8157da !important;
+  color: #a081e3 !important;
 }
 
 /*--- Purple ---*/
@@ -494,10 +494,10 @@ a.ui.purple.header:hover {
 
 /* Inverted */
 .ui.inverted.purple.header {
-  color: #d931f2 !important;
+  color: #e261f5 !important;
 }
 a.ui.inverted.purple.header:hover {
-  color: #dd0efb !important;
+  color: #e440fc !important;
 }
 
 /*--- Pink ---*/
@@ -514,10 +514,10 @@ a.ui.pink.header:hover {
 
 /* Inverted */
 .ui.inverted.pink.header {
-  color: #ea7bba !important;
+  color: #f1a7d1 !important;
 }
 a.ui.inverted.pink.header:hover {
-  color: #ed5faf !important;
+  color: #f28dc6 !important;
 }
 
 /*--- Brown ---*/
@@ -534,10 +534,10 @@ a.ui.brown.header:hover {
 
 /* Inverted */
 .ui.inverted.brown.header {
-  color: #c68e6a !important;
+  color: #d4aa8f !important;
 }
 a.ui.inverted.brown.header:hover {
-  color: #c47f53 !important;
+  color: #d19b79 !important;
 }
 
 /*--- Grey ---*/
@@ -554,10 +554,10 @@ a.ui.grey.header:hover {
 
 /* Inverted */
 .ui.inverted.grey.header {
-  color: #d0d0d0 !important;
+  color: #eaeaea !important;
 }
 a.ui.inverted.grey.header:hover {
-  color: #c3c3c3 !important;
+  color: #dddddd !important;
 }
 
 /*-------------------

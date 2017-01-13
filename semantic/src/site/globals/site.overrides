@@ -74,8 +74,8 @@ h5 {
   text-transform: lowercase !important;
 }
 
-b, .bold {
-  font-weight: 500 !important;
+.bold {
+  font-weight: 400 !important;
 }
 
 /*----------------------

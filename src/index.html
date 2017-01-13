@@ -19,7 +19,8 @@
       $('.star.rating').rating();
       $('.card .dimmer').dimmer({ on: 'hover' });
       $('.ui.card .ui.more.button').click(function(ev) {
-        $('.ui.modal').modal('show');
+        console.log($(ev.target).attr('data-target'));
+        $($(ev.target).attr('data-target')).modal('show');
       });
     });
   </script>
@@ -29,11 +30,9 @@
   <div class="ui container">
     {{#self}}
     <header id="header" class="ui two column stackable grid container">
-      <div class="column left aligned tablet computer large screen widescreen only">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="">
-      </div>
-      <div class="column center aligned mobile only">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="">
+      <div class="column left aligned">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="tablet computer large screen widescreen only">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="ui centered image mobile only">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
@@ -54,34 +53,28 @@
         {{#projects}}
           <article class="ui inverted fluid card">
             <header class="image dimmable">
-              <!-- <div class="computer large screen only"> -->
-                <div class="ui blurring dimmer">
-                  <div class="content">
-                    <div class="center">
-                      <button class="ui right labeled teal more icon button">
-                        <i class="right arrow icon"></i>
-                        View
-                      </button>
-                    </div>
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#{{titleSlug}}-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
                   </div>
-                <!-- </div> -->
+                </div>
               </div>
               <img 
                 src="{{media.images.screenshot.tile}}"
-                srcset="{{media.images.screenshot.tile2x}} 2x">
+                srcset="{{media.images.screenshot.tile2x}} 2x" alt="screenshot"
+                class="ui fluid image">
             </header>
             <section class="content">
               <div class="header">{{title}}</div>
               <div class="meta">
-                <!-- <a class="group computer large screen widescreen only">{{dateFormatted}}</a> -->
               </div>
               <p class="description">{{description}}</p>
             </section>
             <footer class="extra content">
-              <!-- <a>
-                <i class="folder icon"></i>
-                {{collection}}
-              </a> -->
               <button class="ui right labeled teal more icon button right floated mobile tablet only">
                 <i class="right arrow icon"></i>
                 View
@@ -96,6 +89,16 @@
               </a>
             </footer>
           </article>
+
+          <article id="{{titleSlug}}-modal" class="ui modal">
+            <!-- <header class="ui header">
+              {{title}}
+            </header> -->
+            <section class="content">
+              <img src="{{media.images.screenshot.full}}" alt="screenshot" class="ui fluid bordered image">
+              <p>{{{content}}}</p>
+            </section>
+          </article>
         {{/projects}}
       </div>
     </section>
@@ -105,32 +108,21 @@
         credits
       </div>
       <div class="ui clearing dimmable text container">
-        <div class="ui active inverted dimmer"></div>
+        <div class="ui inverted dimmer"></div>
         <p>Adrien de Pierres <img src="/images/logo.svg" alt="logo" class="ui mini image right floated"></p>
         <p>Udacity <img src="/images/udacity.svg" alt="udacity" class="ui mini image right floated"></p>
       </div>
     </footer>
 
     <section>
-      <div class="ui basic modal">
-        <div class="ui icon header">
-          <i class="archive icon"></i>
-          Archive Old Messages
-        </div>
-        <div class="content">
-          <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
-        </div>
-        <div class="actions">
-          <div class="ui red basic cancel inverted button">
-            <i class="remove icon"></i>
-            No
-          </div>
-          <div class="ui green ok inverted button">
-            <i class="checkmark icon"></i>
-            Yes
-          </div>
-        </div>
-      </div>
+      <article class="ui modal">
+        <header class="ui header">
+          The Title
+        </header>
+        <section class="content">
+          <p>The content area.</p>
+        </section>
+      </article>
     </section>
   </div>
 </body>

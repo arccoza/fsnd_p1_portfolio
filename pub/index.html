@@ -19,7 +19,8 @@
       $('.star.rating').rating();
       $('.card .dimmer').dimmer({ on: 'hover' });
       $('.ui.card .ui.more.button').click(function(ev) {
-        $('.ui.modal').modal('show');
+        console.log($(ev.target).attr('data-target'));
+        $($(ev.target).attr('data-target')).modal('show');
       });
     });
   </script>
@@ -28,11 +29,9 @@
 <body>
   <div class="ui container">
     <header id="header" class="ui two column stackable grid container">
-      <div class="column left aligned tablet computer large screen widescreen only">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="">
-      </div>
-      <div class="column center aligned mobile only">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="">
+      <div class="column left aligned">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="tablet computer large screen widescreen only">
+        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="ui centered image mobile only">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">Adrien <b>de Pierres</b></h1>
@@ -51,34 +50,28 @@
       <div class="ui three doubling stackable cards">
           <article class="ui inverted fluid card">
             <header class="image dimmable">
-              <!-- <div class="computer large screen only"> -->
-                <div class="ui blurring dimmer">
-                  <div class="content">
-                    <div class="center">
-                      <button class="ui right labeled teal more icon button">
-                        <i class="right arrow icon"></i>
-                        View
-                      </button>
-                    </div>
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#movie-trailer-website-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
                   </div>
-                <!-- </div> -->
+                </div>
               </div>
               <img 
                 src="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w320.jpg"
-                srcset="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w640.jpg 2x">
+                srcset="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w640.jpg 2x" alt="screenshot"
+                class="ui fluid image">
             </header>
             <section class="content">
               <div class="header">Movie Trailer Website</div>
               <div class="meta">
-                <!-- <a class="group computer large screen widescreen only">Nov 2016</a> -->
               </div>
               <p class="description">Project #0 of FSND, a movie trailer site.</p>
             </section>
             <footer class="extra content">
-              <!-- <a>
-                <i class="folder icon"></i>
-                projects
-              </a> -->
               <button class="ui right labeled teal more icon button right floated mobile tablet only">
                 <i class="right arrow icon"></i>
                 View
@@ -93,36 +86,77 @@
               </a>
             </footer>
           </article>
+
+          <article id="movie-trailer-website-modal" class="ui modal">
+            <!-- <header class="ui header">
+              Movie Trailer Website
+            </header> -->
+            <section class="content">
+              <img src="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w1280.jpg" alt="screenshot" class="ui fluid bordered image">
+              <p><h1 id="movie-trailer-website">Movie Trailer Website</h1>
+<p>Project #0 of the Udacity FSND.</p>
+<p>This project was developed for and requires python 2.7.</p>
+<p>All development and testing was done on Linux (elementary OS 0.4 / Ubuntu 16.04), running the project under Windows was not tested, but effort was made to make sure it should run.</p>
+<p>A modern browser (IE 11 / Edge, current versions of Chrome / Firefox / Safari) is required to view the site.</p>
+<p>An internet connection is required to access online resources.</p>
+<h2 id="download-and-setup">Download and Setup</h2>
+<h3 id="download">Download</h3>
+<p>To download this project either:</p>
+<ul>
+<li>Clone this repo with <code>git clone https://github.com/arccoza/fsnd_p0_movie_trailer_website.git</code></li>
+<li>Or download it as an archive from <a href="https://github.com/arccoza/fsnd_p0_movie_trailer_website/archive/master.zip">here</a> and unzip.</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>Once you have the project in the <code>fsnd_p0_movie_trailer_website</code> directory (or wherever you put it) setup a Python environment (optional), then install the dependencies, like so:</p>
+<h4 id="python-environment-optional-">Python environment (optional)</h4>
+<ol>
+<li>From the command line in the fsnd_p0_movie_trailer_website directory, type: <code>virtualenv -p python2 .env</code></li>
+<li>Activate the environment in this console with <code>source .env/bin/activate</code></li>
+</ol>
+<p>If you do not have <strong>virtualenv</strong> installed <a href="https://virtualenv.pypa.io/en/stable/installation/">click here</a> for help.</p>
+<h4 id="install-required-packages">Install required packages</h4>
+<ul>
+<li>From the command line in the fsnd_p0_movie_trailer_website directory, type: <code>pip install -r requirements.txt</code></li>
+</ul>
+<p>If you do not have <strong>pip</strong> installed <a href="https://pip.pypa.io/en/stable/installing/">click here</a> for help.</p>
+<h2 id="building-and-running">Building and Running</h2>
+<p>To access the Movie Trailers site:</p>
+<ol>
+<li>Make sure your python environment is active (optional).</li>
+<li>Build the site by running <code>python build.py</code> (this may take a moment) from the command line in the fsnd_p0_movie_trailer_website directory.</li>
+<li>Access the site by running the http server <code>python server.py</code></li>
+<li>Open your browser to <a href="http://localhost:8000">http://localhost:8000</a></li>
+</ol>
+<p>If everything worked you should see something like the screenshot.</p>
+<h2 id="usage">Usage</h2>
+<p>Hover over movie posters to see the <strong>play</strong> and <strong>info</strong> buttons. Click on the <strong>play</strong> button to view a trailer. Click on the small <strong>info</strong> button to read a plot overview.</p>
+</p>
+            </section>
+          </article>
           <article class="ui inverted fluid card">
             <header class="image dimmable">
-              <!-- <div class="computer large screen only"> -->
-                <div class="ui blurring dimmer">
-                  <div class="content">
-                    <div class="center">
-                      <button class="ui right labeled teal more icon button">
-                        <i class="right arrow icon"></i>
-                        View
-                      </button>
-                    </div>
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#portfolio-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
                   </div>
-                <!-- </div> -->
+                </div>
               </div>
               <img 
                 src="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w320.jpg"
-                srcset="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w640.jpg 2x">
+                srcset="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w640.jpg 2x" alt="screenshot"
+                class="ui fluid image">
             </header>
             <section class="content">
               <div class="header">Portfolio</div>
               <div class="meta">
-                <!-- <a class="group computer large screen widescreen only">Dec 2016</a> -->
               </div>
               <p class="description">Project #1 of FSND, a portfolio site.</p>
             </section>
             <footer class="extra content">
-              <!-- <a>
-                <i class="folder icon"></i>
-                projects
-              </a> -->
               <button class="ui right labeled teal more icon button right floated mobile tablet only">
                 <i class="right arrow icon"></i>
                 View
@@ -137,36 +171,44 @@
               </a>
             </footer>
           </article>
+
+          <article id="portfolio-modal" class="ui modal">
+            <!-- <header class="ui header">
+              Portfolio
+            </header> -->
+            <section class="content">
+              <img src="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w1280.jpg" alt="screenshot" class="ui fluid bordered image">
+              <p><h1 id="portfolio">Portfolio</h1>
+<h2 id="caveats">Caveats</h2>
+<h3 id="watchers">Watchers</h3>
+<p>There is a bug in the version of Gaze used by Gulp which will sometimes cause the watcher to crash, until the fix makes it into Gulp, just restart the watcher.</p>
+</p>
+            </section>
+          </article>
           <article class="ui inverted fluid card">
             <header class="image dimmable">
-              <!-- <div class="computer large screen only"> -->
-                <div class="ui blurring dimmer">
-                  <div class="content">
-                    <div class="center">
-                      <button class="ui right labeled teal more icon button">
-                        <i class="right arrow icon"></i>
-                        View
-                      </button>
-                    </div>
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#project-2-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
                   </div>
-                <!-- </div> -->
+                </div>
               </div>
               <img 
                 src="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w320.jpg"
-                srcset="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w640.jpg 2x">
+                srcset="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w640.jpg 2x" alt="screenshot"
+                class="ui fluid image">
             </header>
             <section class="content">
               <div class="header">Project #2</div>
               <div class="meta">
-                <!-- <a class="group computer large screen widescreen only">Jan 2017</a> -->
               </div>
               <p class="description">Project #2 of FSND, coming soon.</p>
             </section>
             <footer class="extra content">
-              <!-- <a>
-                <i class="folder icon"></i>
-                projects
-              </a> -->
               <button class="ui right labeled teal more icon button right floated mobile tablet only">
                 <i class="right arrow icon"></i>
                 View
@@ -180,6 +222,18 @@
                 <i class="calendar icon"></i>
               </a>
             </footer>
+          </article>
+
+          <article id="project-2-modal" class="ui modal">
+            <!-- <header class="ui header">
+              Project #2
+            </header> -->
+            <section class="content">
+              <img src="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w1280.jpg" alt="screenshot" class="ui fluid bordered image">
+              <p><h1 id="project-2">Project #2</h1>
+<p>Coming soon.</p>
+</p>
+            </section>
           </article>
       </div>
     </section>
@@ -189,32 +243,21 @@
         credits
       </div>
       <div class="ui clearing dimmable text container">
-        <div class="ui active inverted dimmer"></div>
+        <div class="ui inverted dimmer"></div>
         <p>Adrien de Pierres <img src="/images/logo.svg" alt="logo" class="ui mini image right floated"></p>
         <p>Udacity <img src="/images/udacity.svg" alt="udacity" class="ui mini image right floated"></p>
       </div>
     </footer>
 
     <section>
-      <div class="ui basic modal">
-        <div class="ui icon header">
-          <i class="archive icon"></i>
-          Archive Old Messages
-        </div>
-        <div class="content">
-          <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
-        </div>
-        <div class="actions">
-          <div class="ui red basic cancel inverted button">
-            <i class="remove icon"></i>
-            No
-          </div>
-          <div class="ui green ok inverted button">
-            <i class="checkmark icon"></i>
-            Yes
-          </div>
-        </div>
-      </div>
+      <article class="ui modal">
+        <header class="ui header">
+          The Title
+        </header>
+        <section class="content">
+          <p>The content area.</p>
+        </section>
+      </article>
     </section>
   </div>
 </body>
