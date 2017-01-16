@@ -700,7 +700,7 @@ input::selection {
 
 #intro > .ui.image {
   max-height: inherit;
-  border: 5px solid #111111;
+  /*border: 5px solid @black;*/
   overflow: hidden;
 }
 

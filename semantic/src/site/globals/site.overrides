@@ -14,7 +14,7 @@
 
 #intro > .ui.image {
   max-height: inherit;
-  border: 5px solid @black;
+  /*border: 5px solid @black;*/
   overflow: hidden;
 }
 

@@ -34,7 +34,12 @@
 
     <section id="intro" class="ui container">
       <div class="ui fluid image">
-        <img src="/images/terminal-white.jpg" alt="splash image">
+        <!-- <img src="/images/terminal-white.jpg" alt="splash image"> -->
+        <img
+          src="/images/terminal-white.jpg"
+          sizes="100vw"
+          srcset="/images/terminal-white-w320.jpg 320w, /images/terminal-white-w640.jpg 640w, /images/terminal-white-w1280.jpg 1280w"
+          alt="splash image">
       </div>
     </section>
     {{/self}}
@@ -68,7 +73,7 @@
               <p class="description">{{description}}</p>
             </section>
             <footer class="extra content">
-              <button class="ui right labeled teal more icon button right floated mobile tablet only">
+              <button class="ui right labeled teal more icon button right floated mobile tablet only" data-target="#{{titleSlug}}-modal">
                 <i class="right arrow icon"></i>
                 View
               </button>
@@ -85,7 +90,12 @@
 
           <article id="{{titleSlug}}-modal" class="ui modal">
             <section class="content">
-              <img src="{{media.images.screenshot.full}}" alt="screenshot" class="ui fluid bordered image">
+              <img
+                src="{{media.images.screenshot.full}}"
+                sizes="100vw"
+                srcset="{{media.images.screenshot.tile}} 320w, {{media.images.screenshot.half}} 640w, {{media.images.screenshot.full}} 1280w"
+                alt="screenshot"
+                class="ui fluid bordered image">
               <p>{{{content}}}</p>
             </section>
           </article>
