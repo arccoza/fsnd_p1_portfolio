@@ -15,7 +15,7 @@ An internet connection is required to access online resources.
 
 ### Download
 To download this project either:
-- Clone this repo with `https://github.com/arccoza/fsnd_p1_portfolio.git`
+- Clone this repo with `git clone https://github.com/arccoza/fsnd_p1_portfolio.git`
 - Or download it as an archive from [here](https://github.com/arccoza/fsnd_p1_portfolio/archive/master.zip) and unzip.
 
 ### Setup
