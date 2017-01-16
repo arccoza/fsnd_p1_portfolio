@@ -13,13 +13,12 @@
 }
 
 #intro > .ui.image {
-  // transform: skew(30deg, -5deg) scale(1.5);
   max-height: inherit;
   border: 5px solid @black;
   overflow: hidden;
 }
 
-#logo {
+#logo > img {
   height: 4em;
 }
 
@@ -31,43 +30,12 @@
   margin: 0 0 2 * @large 0;
 }
 
-hr {
-  border: none;
-  border-top: @1px solid @borderColor;
-}
-
-hr.black {
-  border: none;
-  border-top: @1px solid @black;
-}
-
-hr.white {
-  border: none;
-  border-top: @1px solid @white;
-}
-
-hr.thick {
-  border-top-width: @2px;
-}
-
 /*******************************
              Page
 *******************************/
 
 body {
   font-weight: @pageFontWeight;
-}
-
-/*******************************
-             Headers
-*******************************/
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  // text-transform: uppercase;
 }
 
 /*******************************
@@ -102,6 +70,7 @@ h5 {
     display: none !important;
   }
 }
+
 /* Tablet Only Hide */
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
   [class*="mobile only"]:not(.tablet),

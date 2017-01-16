@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -18,21 +18,23 @@
 </head>
 <body>
   <div class="ui container">
+
     {{#self}}
     <header id="header" class="ui two column stackable grid container">
-      <div class="column left aligned">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="tablet computer large screen widescreen only">
-        <img id="logo" src="/images/logo-hollow.svg" alt="logo" class="ui centered image mobile only">
+      <div id="logo" class="column left aligned">
+        <img src="/images/logo-hollow.svg" alt="logo" class="tablet computer large screen widescreen only">
+        <img src="/images/logo-hollow.svg" alt="logo" class="ui centered image mobile only">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
         <div class="ui container right aligned uppercase">developer</div>
       </div>
-      <hr class="twelve wide column">
+      <div class="ui divider twelve wide column"></div>
     </header>
+
     <section id="intro" class="ui container">
       <div class="ui fluid image">
-        <img src="/images/terminal-white.jpg">
+        <img src="/images/terminal-white.jpg" alt="splash image">
       </div>
     </section>
     {{/self}}
@@ -40,6 +42,7 @@
     <section id="content" class="ui container">
       <h2 class="ui header">Portfolio</h2>
       <div class="ui three doubling stackable cards">
+
         {{#projects}}
           <article class="ui inverted fluid card">
             <header class="image dimmable">
@@ -59,7 +62,7 @@
                 class="ui fluid image">
             </header>
             <section class="content">
-              <div class="header">{{title}}</div>
+              <h2 class="header">{{title}}</h2>
               <div class="meta">
               </div>
               <p class="description">{{description}}</p>
@@ -81,15 +84,13 @@
           </article>
 
           <article id="{{titleSlug}}-modal" class="ui modal">
-            <!-- <header class="ui header">
-              {{title}}
-            </header> -->
             <section class="content">
               <img src="{{media.images.screenshot.full}}" alt="screenshot" class="ui fluid bordered image">
               <p>{{{content}}}</p>
             </section>
           </article>
         {{/projects}}
+
       </div>
     </section>
 
@@ -104,16 +105,6 @@
       </div>
     </footer>
 
-    <section>
-      <article class="ui modal">
-        <header class="ui header">
-          The Title
-        </header>
-        <section class="content">
-          <p>The content area.</p>
-        </section>
-      </article>
-    </section>
   </div>
 </body>
 </html>

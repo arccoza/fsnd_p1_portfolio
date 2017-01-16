@@ -171,7 +171,7 @@ input::selection {
   border: 5px solid #111111;
   overflow: hidden;
 }
-#logo {
+#logo > img {
   height: 4em;
 }
 #content.ui.container {
@@ -179,21 +179,6 @@ input::selection {
 }
 #footer.ui.container {
   margin: 0 0 2.57142857rem 0;
-}
-hr {
-  border: none;
-  border-top: 0.07142857rem solid rgba(34, 36, 38, 0.15);
-}
-hr.black {
-  border: none;
-  border-top: 0.07142857rem solid #111111;
-}
-hr.white {
-  border: none;
-  border-top: 0.07142857rem solid #FFFFFF;
-}
-hr.thick {
-  border-top-width: 0.14285714rem;
 }
 
 
@@ -204,12 +189,6 @@ hr.thick {
 body {
   font-weight: 300;
 }
-
-
-/*******************************
-             Headers
-*******************************/
-
 
 
 /*******************************
