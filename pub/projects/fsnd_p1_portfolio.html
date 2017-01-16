@@ -1,4 +1,64 @@
 <h1 id="portfolio">Portfolio</h1>
-<h2 id="caveats">Caveats</h2>
+<p>Project #1 of FSND</p>
+<p>A portfolio static site generated with Gulp.
+All source files are in <code>src</code> and <code>semantic</code>.
+All built files are in <code>pub</code>.</p>
+<p>All development and testing was done on Linux (elementary OS 0.4 / Ubuntu 16.04) and Node.js v6.9.2, running the project under Windows was not tested, but it should run.</p>
+<p>A modern browser (IE 11 / Edge, current versions of Chrome / Firefox / Safari) that supports current flexbox is required to view the site.</p>
+<p>An internet connection is required to access online resources.</p>
+<h2 id="download-and-setup">Download and Setup</h2>
+<h3 id="download">Download</h3>
+<p>To download this project either:</p>
+<ul>
+<li>Clone this repo with <code>https://github.com/arccoza/fsnd_p1_portfolio.git</code></li>
+<li>Or download it as an archive from <a href="https://github.com/arccoza/fsnd_p1_portfolio/archive/master.zip">here</a> and unzip.</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>Once you have the project in the <code>fsnd_p1_portfolio</code> directory (or wherever you put it) ensure you have a recent version of NPM and Node.js installed (&gt;= v6.9.2), instructions for installing Node.js on your platform can be found <a href="https://nodejs.org/en/download/package-manager/">here</a>. Once that&#39;s all done, install the projects dependencies, like so:</p>
+<ol>
+<li>Navigate to the project folder from the terminal.</li>
+<li>From the terminal in the project folder type <code>npm install</code>.</li>
+<li>NPM should successfully install the projects dependencies.</li>
+<li>Install Gulp globally with <code>npm install -g gulp-cli</code> or <code>sudo npm install -g gulp-cli</code> for linux/osx.</li>
+<li>Install Serve globally with <code>npm install -g serve</code> or <code>sudo npm install -g serve</code> for linux/osx.</li>
+</ol>
+<h2 id="building-and-running">Building and Running</h2>
+<p>To build and run the static site do:</p>
+<ol>
+<li>From the project folder in terminal type <code>gulp build</code>, this will build the entire project.<ul>
+<li>There are other build options available, but you should run a complete build at least once.</li>
+<li><code>build:site</code> will build only the html, javascript and images required for the site. Run this when modifying content in the <code>src</code> folder.<ul>
+<li><code>watch:site</code> will watch the <code>src</code> folder for changes and rebuild as needed.</li>
+</ul>
+</li>
+<li><code>build:ui</code> will build only the CSS and javascript required for site layout and elements. Run this when modifying content in the <code>semantic</code> folder.<ul>
+<li><code>watch:ui</code> will watch the <code>semantic</code> folder for changes and rebuild as needed.</li>
+</ul>
+</li>
+<li><code>watch</code> will watch both the <code>src</code> and <code>semantic</code> folders for changes.</li>
+</ul>
+</li>
+<li>After building the site, run <code>server pub -c</code> from the terminal inside the project folder to launch a webserver on <a href="http://localhost:3000/">http://localhost:3000/</a> hosting the files in the <code>pub</code> folder.</li>
+<li>Open <a href="http://localhost:3000/">http://localhost:3000/</a> in your browser to view the site.</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<p>The site is fully responsive, test it with dev tools. Hover over images in the Portfolio section and click the view button to see a modal with more info about the project.</p>
+<h2 id="caveats-and-additional-info">Caveats and Additional Info</h2>
+<h3 id="site-css">Site CSS</h3>
+<p>The project uses the Semantic UI framework, using LESS.
+You can find the sites source CSS and LESS from the project folder in <code>semantic/src/site/</code>.</p>
+<p>These files contain site CSS and LESS:</p>
+<ul>
+<li><code>globals/reset.overrides</code></li>
+<li><code>globals/site.overrides</code></li>
+<li><code>globals/site.variables</code></li>
+<li><code>views/card.overrides</code></li>
+<li><code>views/card.variables</code></li>
+<li><code>collections/grid.variables</code></li>
+<li><code>elements/container.overrides</code></li>
+<li><code>elements/divider.variables</code></li>
+<li><code>modules/modal.overrides</code></li>
+</ul>
+<p>All other site content is in the <code>src</code> folder.</p>
 <h3 id="watchers">Watchers</h3>
 <p>There is a bug in the version of Gaze used by Gulp which will sometimes cause the watcher to crash, until the fix makes it into Gulp, just restart the watcher.</p>
