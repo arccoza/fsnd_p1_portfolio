@@ -9,6 +9,7 @@ var gdata = require('gulp-data');
 var each = require('gulp-each');
 var gif = require('gulp-if');
 var markdown = require('gulp-markdown');
+var marked = require('marked');
 var gmustache = require('gulp-mustache');
 var mustache = require('mustache');
 var matter = require('gulp-gray-matter');
@@ -24,6 +25,12 @@ var db = { files: {} };
 var src = 'src';
 var dest = 'pub';
 slug.defaults.mode ='rfc3986';
+
+// Custom marked header renderer.
+var markedRenderer = new marked.Renderer();
+markedRenderer.heading = function (text, level) {
+  return '<h' + level + '>' + text + '</h' + level + '>';
+}
 
 // Gulp plugin to mark the original src of the file.
 var markSrc = function(content, file, next) {
@@ -66,7 +73,7 @@ var scrapeData = function(content, file, next) {
 
   db.files[fdata.src] = fdata;
 
-  print(fdata.src);
+  // print(fdata.src);
   next(null, content);
 };
 
@@ -101,7 +108,7 @@ function models() {
     .pipe(each(markSrc))
     .pipe(matter())
     .pipe(gmustache())
-    .pipe(markdown())
+    .pipe(markdown({renderer: markedRenderer}))
     .pipe(each(scrapeData))
     // .pipe(gdata(function(file) {
     //   console.log(file.data);
@@ -118,7 +125,7 @@ function templates() {
     .pipe(each(markSrc))
     .pipe(matter())
     .pipe(gmustache())
-    .pipe(markdown())
+    .pipe(markdown({renderer: markedRenderer}))
     .pipe(each(renderHtml))
     .pipe(gulp.dest(dest));
 }

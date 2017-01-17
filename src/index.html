@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto+Condensed:300,400|Roboto:300,400" rel="stylesheet"> -->
+  {{! <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto+Condensed:300,400|Roboto:300,400" rel="stylesheet"> }}
   <link rel="stylesheet" type="text/css" href="/fw/semantic.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="/fw/semantic.js"></script>
@@ -22,8 +22,8 @@
     {{#self}}
     <header id="header" class="ui two column stackable grid container">
       <div id="logo" class="column left aligned">
-        <img src="/images/logo-hollow.svg" alt="logo" class="tablet computer large screen widescreen only">
-        <img src="/images/logo-hollow.svg" alt="logo" class="ui centered image mobile only">
+        <img src="/images/logo-hollow.svg" alt="logo" class="logo-image tablet computer large screen widescreen only">
+        <img src="/images/logo-hollow.svg" alt="logo" class="logo-image ui centered image mobile only">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
@@ -34,7 +34,7 @@
 
     <section id="intro" class="ui container">
       <div class="ui fluid image">
-        <!-- <img src="/images/terminal-white.jpg" alt="splash image"> -->
+        {{! <img src="/images/terminal-white.jpg" alt="splash image"> }}
         <img
           src="/images/terminal-white.jpg"
           sizes="100vw"
@@ -96,7 +96,7 @@
                 srcset="{{media.images.screenshot.tile}} 320w, {{media.images.screenshot.half}} 640w, {{media.images.screenshot.full}} 1280w"
                 alt="screenshot"
                 class="ui fluid bordered image">
-              <p>{{{content}}}</p>
+              {{{content}}}
             </section>
           </article>
         {{/projects}}

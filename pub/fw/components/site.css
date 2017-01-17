@@ -171,7 +171,7 @@ input::selection {
   /*border: 5px solid @black;*/
   overflow: hidden;
 }
-#logo > img {
+#logo > .logo-image {
   height: 4em;
 }
 #content.ui.container {

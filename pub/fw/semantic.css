@@ -704,7 +704,7 @@ input::selection {
   overflow: hidden;
 }
 
-#logo > img {
+#logo > .logo-image {
   height: 4em;
 }
 
@@ -26147,6 +26147,8 @@ a.ui.card:hover,
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* NOTE: Ignores style guide to override Semantic styling. */
+
 /* Generic */
 
 .ui.inverted.cards > .card > .content a:not(.ui),
@@ -26214,6 +26216,8 @@ a.ui.card:hover,
   background: none;
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* NOTE: Ignores style guide to override Semantic styling. */
 
 .ui.inverted.cards > .card > .extra a:not(.ui),
 .ui.inverted.card > .extra a:not(.ui) {

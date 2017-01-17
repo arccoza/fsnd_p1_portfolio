@@ -18,7 +18,7 @@
   overflow: hidden;
 }
 
-#logo > img {
+#logo > .logo-image {
   height: 4em;
 }
 

@@ -40,6 +40,7 @@
   color: @invertedMetaColor;
 }
 
+/* NOTE: Ignores style guide to override Semantic styling. */
 /* Generic */
 .ui.inverted.cards > .card > .content a:not(.ui),
 .ui.inverted.card > .content a:not(.ui) {
@@ -102,6 +103,7 @@
   color: @invertedExtraColor;
 }
 
+/* NOTE: Ignores style guide to override Semantic styling. */
 .ui.inverted.cards > .card > .extra a:not(.ui),
 .ui.inverted.card > .extra a:not(.ui) {
   color: @invertedExtraLinkColor;
