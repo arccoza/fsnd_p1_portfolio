@@ -37,7 +37,7 @@ To build and run the static site do:
   - `build:ui` will build only the CSS and javascript required for site layout and elements. Run this when modifying content in the `semantic` folder.
     - `watch:ui` will watch the `semantic` folder for changes and rebuild as needed.
   - `watch` will watch both the `src` and `semantic` folders for changes.
-2. After building the site, run `server pub -c` from the terminal inside the project folder to launch a webserver on [http://localhost:3000/](http://localhost:3000/) hosting the files in the `pub` folder.
+2. After building the site, run `serve pub -c` from the terminal inside the project folder to launch a webserver on [http://localhost:3000/](http://localhost:3000/) hosting the files in the `pub` folder.
 3. Open [http://localhost:3000/](http://localhost:3000/) in your browser to view the site.
 
 If everything worked you should see something like:
