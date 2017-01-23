@@ -50,6 +50,10 @@ var scrapeData = function(content, file, next) {
 
   fdata.content = content;
   fdata.path = fbase;
+  // print(npath.relative(npath.dirname(file.path), file.base));
+  fdata.rwd = npath.relative(npath.dirname(file.path), file.base);
+  fdata.rwd += fdata.rwd ? '/' : '';
+  print(fdata.rwd);
   fdata.titleSlug = fdata.title ? slug(fdata.title) : null;
   fdata.dateSlug = fdata.date ? moment(fdata.date).format('YYYY-MM-DD') : null;
   fdata.dateFormatted = fdata.date ? moment(fdata.date).format('MMM YYYY') : null;

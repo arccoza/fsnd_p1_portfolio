@@ -5,15 +5,16 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{! <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto+Condensed:300,400|Roboto:300,400" rel="stylesheet"> }}
-  <link rel="stylesheet" type="text/css" href="/fw/semantic.css">
+  {{#self}}
+  <link rel="stylesheet" type="text/css" href="{{{rwd}}}fw/semantic.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/fw/semantic.js"></script>
-  <script type="text/javascript" src="/fw/components/modal.js"></script>
-  <script type="text/javascript" src="/fw/components/popup.js"></script>
-  <script type="text/javascript" src="/fw/components/dimmer.js"></script>
-  <script type="text/javascript" src="/fw/components/rating.js"></script>
-  <script type="text/javascript" src="/fw/components/transition.js"></script>
-  <script type="text/javascript" src="/js/index.js"></script>
+  <!-- <script type="text/javascript" src="{{{rwd}}}fw/semantic.min.js"></script> -->
+  <script type="text/javascript" src="{{{rwd}}}fw/components/modal.js"></script>
+  <script type="text/javascript" src="{{{rwd}}}fw/components/popup.js"></script>
+  <script type="text/javascript" src="{{{rwd}}}fw/components/dimmer.js"></script>
+  <script type="text/javascript" src="{{{rwd}}}fw/components/transition.js"></script>
+  <script type="text/javascript" src="{{{rwd}}}js/index.js"></script>
+  {{/self}}
   <title>{{self.title}}</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
     {{#self}}
     <header id="header" class="ui two column stackable grid container">
       <div id="logo" class="column left aligned">
-        <img src="/images/logo-hollow.svg" alt="logo" class="logo-image tablet computer large screen widescreen only">
-        <img src="/images/logo-hollow.svg" alt="logo" class="logo-image ui centered image mobile only">
+        <img src="{{{rwd}}}images/logo-hollow.svg" alt="logo" class="logo-image tablet computer large screen widescreen only">
+        <img src="{{{rwd}}}images/logo-hollow.svg" alt="logo" class="logo-image ui centered image mobile only">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
@@ -34,11 +35,11 @@
 
     <section id="intro" class="ui container">
       <div class="ui fluid image">
-        {{! <img src="/images/terminal-white.jpg" alt="splash image"> }}
+        {{! <img src="images/terminal-white.jpg" alt="splash image"> }}
         <img
-          src="/images/terminal-white.jpg"
+          src="{{{rwd}}}images/terminal-white.jpg"
           sizes="100vw"
-          srcset="/images/terminal-white-w320.jpg 320w, /images/terminal-white-w640.jpg 640w, /images/terminal-white-w1280.jpg 1280w"
+          srcset="{{{rwd}}}images/terminal-white-w320.jpg 320w, {{{rwd}}}images/terminal-white-w640.jpg 640w, {{{rwd}}}images/terminal-white-w1280.jpg 1280w"
           alt="splash image">
       </div>
     </section>
@@ -62,8 +63,8 @@
                 </div>
               </div>
               <img 
-                src="{{media.images.screenshot.tile}}"
-                srcset="{{media.images.screenshot.tile2x}} 2x" alt="screenshot"
+                src="{{{self.rwd}}}{{{media.images.screenshot.tile}}}"
+                srcset="{{{self.rwd}}}{{{media.images.screenshot.tile2x}}} 2x" alt="screenshot"
                 class="ui fluid image">
             </header>
             <section class="content">
@@ -91,9 +92,9 @@
           <article id="{{titleSlug}}-modal" class="ui modal">
             <section class="content">
               <img
-                src="{{media.images.screenshot.full}}"
+                src="{{{self.rwd}}}{{{media.images.screenshot.full}}}"
                 sizes="100vw"
-                srcset="{{media.images.screenshot.tile}} 320w, {{media.images.screenshot.half}} 640w, {{media.images.screenshot.full}} 1280w"
+                srcset="{{{self.rwd}}}{{{media.images.screenshot.tile}}} 320w, {{{self.rwd}}}{{media.images.screenshot.half}} 640w, {{{self.rwd}}}{{{media.images.screenshot.full}}} 1280w"
                 alt="screenshot"
                 class="ui fluid bordered image">
               {{{content}}}
@@ -110,8 +111,8 @@
       </div>
       <div class="ui clearing dimmable text container">
         <div class="ui inverted dimmer"></div>
-        <p>Adrien de Pierres <img src="/images/logo.svg" alt="logo" class="ui mini image right floated"></p>
-        <p>Udacity <img src="/images/udacity.svg" alt="udacity" class="ui mini image right floated"></p>
+        <p>Adrien de Pierres <img src="{{{self.rwd}}}images/logo.svg" alt="logo" class="ui mini image right floated"></p>
+        <p>Udacity <img src="{{{self.rwd}}}images/udacity.svg" alt="udacity" class="ui mini image right floated"></p>
       </div>
     </footer>
 
