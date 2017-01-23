@@ -1,7 +1,0 @@
-/*******************************
-         Site Overrides
-*******************************/
-
-.ui.dimmer.modals {
-  background: @black;
-}

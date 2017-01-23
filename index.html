@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/fw/semantic.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/fw/semantic.js"></script>
+  <script type="text/javascript" src="/fw/components/modal.js"></script>
+  <script type="text/javascript" src="/fw/components/popup.js"></script>
+  <script type="text/javascript" src="/fw/components/dimmer.js"></script>
+  <script type="text/javascript" src="/fw/components/rating.js"></script>
+  <script type="text/javascript" src="/fw/components/transition.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="ui container">
+
+    <header id="header" class="ui two column stackable grid container">
+      <div id="logo" class="column left aligned">
+        <img src="/images/logo-hollow.svg" alt="logo" class="logo-image tablet computer large screen widescreen only">
+        <img src="/images/logo-hollow.svg" alt="logo" class="logo-image ui centered image mobile only">
+      </div>
+      <div class="column">
+        <h1 class="ui header right aligned uppercase">Adrien <b>de Pierres</b></h1>
+        <div class="ui container right aligned uppercase">developer</div>
+      </div>
+      <div class="ui divider twelve wide column"></div>
+    </header>
+
+    <section id="intro" class="ui container">
+      <div class="ui fluid image">
+        <img
+          src="/images/terminal-white.jpg"
+          sizes="100vw"
+          srcset="/images/terminal-white-w320.jpg 320w, /images/terminal-white-w640.jpg 640w, /images/terminal-white-w1280.jpg 1280w"
+          alt="splash image">
+      </div>
+    </section>
+
+    <section id="content" class="ui container">
+      <h2 class="ui header">Portfolio</h2>
+      <div class="ui three doubling stackable cards">
+
+          <article class="ui inverted fluid card">
+            <header class="image dimmable">
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#movie-trailer-website-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <img 
+                src="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w320.jpg"
+                srcset="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w640.jpg 2x" alt="screenshot"
+                class="ui fluid image">
+            </header>
+            <section class="content">
+              <h2 class="header">Movie Trailer Website</h2>
+              <div class="meta">
+              </div>
+              <p class="description">Project #0 of FSND, a movie trailer site.</p>
+            </section>
+            <footer class="extra content">
+              <button class="ui right labeled teal more icon button right floated mobile tablet only" data-target="#movie-trailer-website-modal">
+                <i class="right arrow icon"></i>
+                View
+              </button>
+              <a class="right floated computer large screen widescreen only">
+                Nov 2016
+                <i class="calendar icon"></i>
+              </a>
+              <a class="left floated mobile tablet only">
+                Nov 2016
+                <i class="calendar icon"></i>
+              </a>
+            </footer>
+          </article>
+
+          <article id="movie-trailer-website-modal" class="ui modal">
+            <section class="content">
+              <img
+                src="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w1280.jpg"
+                sizes="100vw"
+                srcset="&#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w320.jpg 320w, &#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w640.jpg 640w, &#x2F;projects&#x2F;fsnd_p0_movie_trailer_website&#x2F;screen-w1280.jpg 1280w"
+                alt="screenshot"
+                class="ui fluid bordered image">
+              <h1>Movie Trailer Website</h1><p>Project #0 of the Udacity FSND.</p>
+<p>This project was developed for and requires python 2.7.</p>
+<p>All development and testing was done on Linux (elementary OS 0.4 / Ubuntu 16.04), running the project under Windows was not tested, but effort was made to make sure it should run.</p>
+<p>A modern browser (IE 11 / Edge, current versions of Chrome / Firefox / Safari) is required to view the site.</p>
+<p>An internet connection is required to access online resources.</p>
+<h2>Download and Setup</h2><h3>Download</h3><p>To download this project either:</p>
+<ul>
+<li>Clone this repo with <code>git clone https://github.com/arccoza/fsnd_p0_movie_trailer_website.git</code></li>
+<li>Or download it as an archive from <a href="https://github.com/arccoza/fsnd_p0_movie_trailer_website/archive/master.zip">here</a> and unzip.</li>
+</ul>
+<h3>Setup</h3><p>Once you have the project in the <code>fsnd_p0_movie_trailer_website</code> directory (or wherever you put it) setup a Python environment (optional), then install the dependencies, like so:</p>
+<h4>Python environment (optional)</h4><ol>
+<li>From the command line in the fsnd_p0_movie_trailer_website directory, type: <code>virtualenv -p python2 .env</code></li>
+<li>Activate the environment in this console with <code>source .env/bin/activate</code></li>
+</ol>
+<p>If you do not have <strong>virtualenv</strong> installed <a href="https://virtualenv.pypa.io/en/stable/installation/">click here</a> for help.</p>
+<h4>Install required packages</h4><ul>
+<li>From the command line in the fsnd_p0_movie_trailer_website directory, type: <code>pip install -r requirements.txt</code></li>
+</ul>
+<p>If you do not have <strong>pip</strong> installed <a href="https://pip.pypa.io/en/stable/installing/">click here</a> for help.</p>
+<h2>Building and Running</h2><p>To access the Movie Trailers site:</p>
+<ol>
+<li>Make sure your python environment is active (optional).</li>
+<li>Build the site by running <code>python build.py</code> (this may take a moment) from the command line in the fsnd_p0_movie_trailer_website directory.</li>
+<li>Access the site by running the http server <code>python server.py</code></li>
+<li>Open your browser to <a href="http://localhost:8000">http://localhost:8000</a></li>
+</ol>
+<p>If everything worked you should see something like the screenshot.</p>
+<h2>Usage</h2><p>Hover over movie posters to see the <strong>play</strong> and <strong>info</strong> buttons. Click on the <strong>play</strong> button to view a trailer. Click on the small <strong>info</strong> button to read a plot overview.</p>
+
+            </section>
+          </article>
+          <article class="ui inverted fluid card">
+            <header class="image dimmable">
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#portfolio-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <img 
+                src="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w320.jpg"
+                srcset="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w640.jpg 2x" alt="screenshot"
+                class="ui fluid image">
+            </header>
+            <section class="content">
+              <h2 class="header">Portfolio</h2>
+              <div class="meta">
+              </div>
+              <p class="description">Project #1 of FSND, a portfolio site.</p>
+            </section>
+            <footer class="extra content">
+              <button class="ui right labeled teal more icon button right floated mobile tablet only" data-target="#portfolio-modal">
+                <i class="right arrow icon"></i>
+                View
+              </button>
+              <a class="right floated computer large screen widescreen only">
+                Dec 2016
+                <i class="calendar icon"></i>
+              </a>
+              <a class="left floated mobile tablet only">
+                Dec 2016
+                <i class="calendar icon"></i>
+              </a>
+            </footer>
+          </article>
+
+          <article id="portfolio-modal" class="ui modal">
+            <section class="content">
+              <img
+                src="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w1280.jpg"
+                sizes="100vw"
+                srcset="&#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w320.jpg 320w, &#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w640.jpg 640w, &#x2F;projects&#x2F;fsnd_p1_portfolio&#x2F;screen-w1280.jpg 1280w"
+                alt="screenshot"
+                class="ui fluid bordered image">
+              <h1>Portfolio</h1><p>Project #1 of FSND</p>
+<p>A portfolio static site generated with Gulp.
+All source files are in <code>src</code> and <code>semantic</code>.
+All built files are in <code>pub</code>.</p>
+<p>All development and testing was done on Linux (elementary OS 0.4 / Ubuntu 16.04) and Node.js v6.9.2, running the project under Windows was not tested, but it should run.</p>
+<p>A modern browser (IE 11 / Edge, current versions of Chrome / Firefox / Safari) that supports current flexbox is required to view the site.</p>
+<p>An internet connection is required to access online resources.</p>
+<h2>Download and Setup</h2><h3>Download</h3><p>To download this project either:</p>
+<ul>
+<li>Clone this repo with <code>https://github.com/arccoza/fsnd_p1_portfolio.git</code></li>
+<li>Or download it as an archive from <a href="https://github.com/arccoza/fsnd_p1_portfolio/archive/master.zip">here</a> and unzip.</li>
+</ul>
+<h3>Setup</h3><p>Once you have the project in the <code>fsnd_p1_portfolio</code> directory (or wherever you put it) ensure you have a recent version of NPM and Node.js installed (&gt;= v6.9.2), instructions for installing Node.js on your platform can be found <a href="https://nodejs.org/en/download/package-manager/">here</a>. Once that&#39;s all done, install the projects dependencies, like so:</p>
+<ol>
+<li>Navigate to the project folder from the terminal.</li>
+<li>From the terminal in the project folder type <code>npm install</code>.</li>
+<li>NPM should successfully install the projects dependencies.</li>
+<li>Install Gulp globally with <code>npm install -g gulp-cli</code> or <code>sudo npm install -g gulp-cli</code> for linux/osx.</li>
+<li>Install Serve globally with <code>npm install -g serve</code> or <code>sudo npm install -g serve</code> for linux/osx.</li>
+</ol>
+<h2>Building and Running</h2><p>To build and run the static site do:</p>
+<ol>
+<li>From the project folder in terminal type <code>gulp build</code>, this will build the entire project.<ul>
+<li>There are other build options available, but you should run a complete build at least once.</li>
+<li><code>build:site</code> will build only the html, javascript and images required for the site. Run this when modifying content in the <code>src</code> folder.<ul>
+<li><code>watch:site</code> will watch the <code>src</code> folder for changes and rebuild as needed.</li>
+</ul>
+</li>
+<li><code>build:ui</code> will build only the CSS and javascript required for site layout and elements. Run this when modifying content in the <code>semantic</code> folder.<ul>
+<li><code>watch:ui</code> will watch the <code>semantic</code> folder for changes and rebuild as needed.</li>
+</ul>
+</li>
+<li><code>watch</code> will watch both the <code>src</code> and <code>semantic</code> folders for changes.</li>
+</ul>
+</li>
+<li>After building the site, run <code>server pub -c</code> from the terminal inside the project folder to launch a webserver on <a href="http://localhost:3000/">http://localhost:3000/</a> hosting the files in the <code>pub</code> folder.</li>
+<li>Open <a href="http://localhost:3000/">http://localhost:3000/</a> in your browser to view the site.</li>
+</ol>
+<h2>Usage</h2><p>The site is fully responsive, test it with dev tools. Hover over images in the Portfolio section and click the view button to see a modal with more info about the project.</p>
+<h2>Caveats and Additional Info</h2><h3>Site CSS</h3><p>The project uses the Semantic UI framework, using LESS.
+You can find the sites source CSS and LESS from the project folder in <code>semantic/src/site/</code>.</p>
+<p>These files contain site CSS and LESS:</p>
+<ul>
+<li><code>globals/reset.overrides</code></li>
+<li><code>globals/site.overrides</code></li>
+<li><code>globals/site.variables</code></li>
+<li><code>views/card.overrides</code></li>
+<li><code>views/card.variables</code></li>
+<li><code>collections/grid.variables</code></li>
+<li><code>elements/container.overrides</code></li>
+<li><code>elements/divider.variables</code></li>
+<li><code>modules/modal.overrides</code></li>
+</ul>
+<p>All other site content is in the <code>src</code> folder.</p>
+<h3>Watchers</h3><p>There is a bug in the version of Gaze used by Gulp which will sometimes cause the watcher to crash, until the fix makes it into Gulp, just restart the watcher.</p>
+
+            </section>
+          </article>
+          <article class="ui inverted fluid card">
+            <header class="image dimmable">
+              <div class="ui blurring dimmer">
+                <div class="content">
+                  <div class="center">
+                    <button class="ui right labeled teal more icon button" data-target="#project-2-modal">
+                      <i class="right arrow icon"></i>
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <img 
+                src="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w320.jpg"
+                srcset="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w640.jpg 2x" alt="screenshot"
+                class="ui fluid image">
+            </header>
+            <section class="content">
+              <h2 class="header">Project #2</h2>
+              <div class="meta">
+              </div>
+              <p class="description">Project #2 of FSND, coming soon.</p>
+            </section>
+            <footer class="extra content">
+              <button class="ui right labeled teal more icon button right floated mobile tablet only" data-target="#project-2-modal">
+                <i class="right arrow icon"></i>
+                View
+              </button>
+              <a class="right floated computer large screen widescreen only">
+                Jan 2017
+                <i class="calendar icon"></i>
+              </a>
+              <a class="left floated mobile tablet only">
+                Jan 2017
+                <i class="calendar icon"></i>
+              </a>
+            </footer>
+          </article>
+
+          <article id="project-2-modal" class="ui modal">
+            <section class="content">
+              <img
+                src="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w1280.jpg"
+                sizes="100vw"
+                srcset="&#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w320.jpg 320w, &#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w640.jpg 640w, &#x2F;projects&#x2F;fsnd_p2&#x2F;screen-w1280.jpg 1280w"
+                alt="screenshot"
+                class="ui fluid bordered image">
+              <h1>Project #2</h1><p>Coming soon.</p>
+
+            </section>
+          </article>
+
+      </div>
+    </section>
+
+    <footer id="footer" class="ui container">
+      <div class="ui horizontal divider uppercase">
+        credits
+      </div>
+      <div class="ui clearing dimmable text container">
+        <div class="ui inverted dimmer"></div>
+        <p>Adrien de Pierres <img src="/images/logo.svg" alt="logo" class="ui mini image right floated"></p>
+        <p>Udacity <img src="/images/udacity.svg" alt="udacity" class="ui mini image right floated"></p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
