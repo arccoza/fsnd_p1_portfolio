@@ -708,6 +708,12 @@ input::selection {
   height: 4em;
 }
 
+@media only screen and (max-width: 767px) {
+  #logo {
+    text-align: center;
+  }
+}
+
 #content.ui.container {
   margin: 0 0 7.42857143rem 0;
 }

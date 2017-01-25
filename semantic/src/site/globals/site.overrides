@@ -22,6 +22,12 @@
   height: 4em;
 }
 
+@media only screen and (max-width: @largestMobileScreen) {
+  #logo {
+    text-align: center;
+  }
+}
+
 #content.ui.container {
   margin: 0 0 4 * @massive 0;
 }

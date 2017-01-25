@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{! <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto+Condensed:300,400|Roboto:300,400" rel="stylesheet"> }}
   {{#self}}
   <link rel="stylesheet" type="text/css" href="{{{rwd}}}fw/semantic.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
@@ -23,8 +22,7 @@
     {{#self}}
     <header id="header" class="ui two column stackable grid container">
       <div id="logo" class="column left aligned">
-        <img src="{{{rwd}}}images/logo-hollow.svg" alt="logo" class="logo-image tablet computer large screen widescreen only">
-        <img src="{{{rwd}}}images/logo-hollow.svg" alt="logo" class="logo-image ui centered image mobile only">
+        <img src="{{{rwd}}}images/logo-hollow.svg" alt="logo" class="logo-image">
       </div>
       <div class="column">
         <h1 class="ui header right aligned uppercase">{{firstname}} <b>{{lastname}}</b></h1>
@@ -94,7 +92,7 @@
               <img
                 src="{{{self.rwd}}}{{{media.images.screenshot.full}}}"
                 sizes="100vw"
-                srcset="{{{self.rwd}}}{{{media.images.screenshot.tile}}} 320w, {{{self.rwd}}}{{media.images.screenshot.half}} 640w, {{{self.rwd}}}{{{media.images.screenshot.full}}} 1280w"
+                srcset="{{{self.rwd}}}{{{media.images.screenshot.tile}}} 320w, {{{self.rwd}}}{{{media.images.screenshot.half}}} 640w, {{{self.rwd}}}{{{media.images.screenshot.full}}} 1280w"
                 alt="screenshot"
                 class="ui fluid bordered image">
               {{{content}}}
